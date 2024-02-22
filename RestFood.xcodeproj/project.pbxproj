@@ -7,23 +7,69 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		831F06402B6ACA770003D6A6 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831F063F2B6ACA770003D6A6 /* MainScreenViewController.swift */; };
+		831F06422B6ACAB20003D6A6 /* MainScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831F06412B6ACAB20003D6A6 /* MainScreenPresenter.swift */; };
+		831F06442B6ACABF0003D6A6 /* MainScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831F06432B6ACABF0003D6A6 /* MainScreenModel.swift */; };
+		831F06462B6AECA20003D6A6 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831F06452B6AECA20003D6A6 /* MainRouter.swift */; };
+		831F06492B6AF89A0003D6A6 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831F06482B6AF89A0003D6A6 /* CollectionViewCell.swift */; };
+		8325049D2B72FB1000DEEDC1 /* FoodDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8325049C2B72FB1000DEEDC1 /* FoodDetailModel.swift */; };
+		83B607B62B6ED01E00BBDF35 /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B607B52B6ED01E00BBDF35 /* FoodDetailViewController.swift */; };
+		83C56E462B703C3600A3850C /* FoodDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C56E452B703C3600A3850C /* FoodDetailRouter.swift */; };
+		83C56E482B703D4100A3850C /* FoodDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C56E472B703D4100A3850C /* FoodDetailPresenter.swift */; };
 		83D0C3FA2B6778F9005D9DC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D0C3F92B6778F9005D9DC9 /* AppDelegate.swift */; };
 		83D0C3FC2B6778F9005D9DC9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D0C3FB2B6778F9005D9DC9 /* SceneDelegate.swift */; };
-		83D0C3FE2B6778F9005D9DC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D0C3FD2B6778F9005D9DC9 /* ViewController.swift */; };
-		83D0C4012B6778F9005D9DC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83D0C3FF2B6778F9005D9DC9 /* Main.storyboard */; };
+		83D0C3FE2B6778F9005D9DC9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D0C3FD2B6778F9005D9DC9 /* LoginViewController.swift */; };
 		83D0C4032B6778FA005D9DC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83D0C4022B6778FA005D9DC9 /* Assets.xcassets */; };
 		83D0C4062B6778FA005D9DC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83D0C4042B6778FA005D9DC9 /* LaunchScreen.storyboard */; };
+		83EEA8B82B68E26100091203 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EEA8B72B68E26100091203 /* LoginPresenter.swift */; };
+		83EEA8BA2B68E29C00091203 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EEA8B92B68E29C00091203 /* LoginModel.swift */; };
+		83EEA8C82B68E2E600091203 /* ModalTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EEA8BD2B68E2E600091203 /* ModalTransition.swift */; };
+		83EEA8C92B68E2E600091203 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EEA8BE2B68E2E600091203 /* Transition.swift */; };
+		83EEA8CA2B68E2E600091203 /* EmptyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EEA8BF2B68E2E600091203 /* EmptyTransition.swift */; };
+		83EEA8CB2B68E2E600091203 /* PushTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EEA8C02B68E2E600091203 /* PushTransition.swift */; };
+		83EEA8CC2B68E2E600091203 /* PicAnimatedTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EEA8C22B68E2E600091203 /* PicAnimatedTransition.swift */; };
+		83EEA8CD2B68E2E600091203 /* FadeAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EEA8C32B68E2E600091203 /* FadeAnimatedTransitioning.swift */; };
+		83EEA8CE2B68E2E600091203 /* AnimatedTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EEA8C42B68E2E600091203 /* AnimatedTransition.swift */; };
+		83EEA8CF2B68E2E600091203 /* NewAnimatedTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EEA8C52B68E2E600091203 /* NewAnimatedTransition.swift */; };
+		83EEA8D02B68E2E600091203 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EEA8C62B68E2E600091203 /* Router.swift */; };
+		83EEA8D12B68E2E600091203 /* DefaultRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EEA8C72B68E2E600091203 /* DefaultRouter.swift */; };
+		83EEA8D32B68E30000091203 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EEA8D22B68E30000091203 /* LoginRouter.swift */; };
+		9193F79421BCA0C9384763D6 /* Pods_RestFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3410826907CAC30FC6503D89 /* Pods_RestFood.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3410826907CAC30FC6503D89 /* Pods_RestFood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestFood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		535F739F037DA879095B91F3 /* Pods-RestFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestFood.release.xcconfig"; path = "Target Support Files/Pods-RestFood/Pods-RestFood.release.xcconfig"; sourceTree = "<group>"; };
+		831F063F2B6ACA770003D6A6 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		831F06412B6ACAB20003D6A6 /* MainScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenPresenter.swift; sourceTree = "<group>"; };
+		831F06432B6ACABF0003D6A6 /* MainScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenModel.swift; sourceTree = "<group>"; };
+		831F06452B6AECA20003D6A6 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		831F06482B6AF89A0003D6A6 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		8325049C2B72FB1000DEEDC1 /* FoodDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailModel.swift; sourceTree = "<group>"; };
+		83B607B52B6ED01E00BBDF35 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
+		83C56E452B703C3600A3850C /* FoodDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailRouter.swift; sourceTree = "<group>"; };
+		83C56E472B703D4100A3850C /* FoodDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailPresenter.swift; sourceTree = "<group>"; };
 		83D0C3F62B6778F9005D9DC9 /* RestFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83D0C3F92B6778F9005D9DC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83D0C3FB2B6778F9005D9DC9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		83D0C3FD2B6778F9005D9DC9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		83D0C4002B6778F9005D9DC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		83D0C3FD2B6778F9005D9DC9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		83D0C4022B6778FA005D9DC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83D0C4052B6778FA005D9DC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83D0C4072B6778FA005D9DC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83EEA8B72B68E26100091203 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		83EEA8B92B68E29C00091203 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		83EEA8BD2B68E2E600091203 /* ModalTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalTransition.swift; sourceTree = "<group>"; };
+		83EEA8BE2B68E2E600091203 /* Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
+		83EEA8BF2B68E2E600091203 /* EmptyTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyTransition.swift; sourceTree = "<group>"; };
+		83EEA8C02B68E2E600091203 /* PushTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushTransition.swift; sourceTree = "<group>"; };
+		83EEA8C22B68E2E600091203 /* PicAnimatedTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicAnimatedTransition.swift; sourceTree = "<group>"; };
+		83EEA8C32B68E2E600091203 /* FadeAnimatedTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeAnimatedTransitioning.swift; sourceTree = "<group>"; };
+		83EEA8C42B68E2E600091203 /* AnimatedTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedTransition.swift; sourceTree = "<group>"; };
+		83EEA8C52B68E2E600091203 /* NewAnimatedTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAnimatedTransition.swift; sourceTree = "<group>"; };
+		83EEA8C62B68E2E600091203 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		83EEA8C72B68E2E600091203 /* DefaultRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultRouter.swift; sourceTree = "<group>"; };
+		83EEA8D22B68E30000091203 /* LoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		D75B7F023DA87304AA460F46 /* Pods-RestFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestFood.debug.xcconfig"; path = "Target Support Files/Pods-RestFood/Pods-RestFood.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +77,71 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9193F79421BCA0C9384763D6 /* Pods_RestFood.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F64D1F97D4D4CCCEE804DBB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D75B7F023DA87304AA460F46 /* Pods-RestFood.debug.xcconfig */,
+				535F739F037DA879095B91F3 /* Pods-RestFood.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		831F063E2B6ACA470003D6A6 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				831F06472B6AF8820003D6A6 /* CollectionViewCell */,
+				831F06452B6AECA20003D6A6 /* MainRouter.swift */,
+				831F063F2B6ACA770003D6A6 /* MainScreenViewController.swift */,
+				831F06412B6ACAB20003D6A6 /* MainScreenPresenter.swift */,
+				831F06432B6ACABF0003D6A6 /* MainScreenModel.swift */,
+			);
+			name = MainScreen;
+			sourceTree = "<group>";
+		};
+		831F06472B6AF8820003D6A6 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				831F06482B6AF89A0003D6A6 /* CollectionViewCell.swift */,
+			);
+			name = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		83B607B42B6ECF9700BBDF35 /* FoodDetail */ = {
+			isa = PBXGroup;
+			children = (
+				83C56E452B703C3600A3850C /* FoodDetailRouter.swift */,
+				83B607B52B6ED01E00BBDF35 /* FoodDetailViewController.swift */,
+				83C56E472B703D4100A3850C /* FoodDetailPresenter.swift */,
+				8325049C2B72FB1000DEEDC1 /* FoodDetailModel.swift */,
+			);
+			name = FoodDetail;
+			sourceTree = "<group>";
+		};
+		83BF4FC92B67C08B00546F04 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				83EEA8D22B68E30000091203 /* LoginRouter.swift */,
+				83D0C3FD2B6778F9005D9DC9 /* LoginViewController.swift */,
+				83EEA8B72B68E26100091203 /* LoginPresenter.swift */,
+				83EEA8B92B68E29C00091203 /* LoginModel.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 		83D0C3ED2B6778F9005D9DC9 = {
 			isa = PBXGroup;
 			children = (
 				83D0C3F82B6778F9005D9DC9 /* RestFood */,
 				83D0C3F72B6778F9005D9DC9 /* Products */,
+				5F64D1F97D4D4CCCEE804DBB /* Pods */,
+				BD78F4A789C41B6A6AAA5833 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +156,58 @@
 		83D0C3F82B6778F9005D9DC9 /* RestFood */ = {
 			isa = PBXGroup;
 			children = (
+				83B607B42B6ECF9700BBDF35 /* FoodDetail */,
+				831F063E2B6ACA470003D6A6 /* MainScreen */,
+				83EEA8BB2B68E2E600091203 /* Routes */,
+				83BF4FC92B67C08B00546F04 /* Login */,
 				83D0C3F92B6778F9005D9DC9 /* AppDelegate.swift */,
 				83D0C3FB2B6778F9005D9DC9 /* SceneDelegate.swift */,
-				83D0C3FD2B6778F9005D9DC9 /* ViewController.swift */,
-				83D0C3FF2B6778F9005D9DC9 /* Main.storyboard */,
 				83D0C4022B6778FA005D9DC9 /* Assets.xcassets */,
 				83D0C4042B6778FA005D9DC9 /* LaunchScreen.storyboard */,
 				83D0C4072B6778FA005D9DC9 /* Info.plist */,
 			);
 			path = RestFood;
+			sourceTree = "<group>";
+		};
+		83EEA8BB2B68E2E600091203 /* Routes */ = {
+			isa = PBXGroup;
+			children = (
+				83EEA8BC2B68E2E600091203 /* Transition */,
+				83EEA8C62B68E2E600091203 /* Router.swift */,
+				83EEA8C72B68E2E600091203 /* DefaultRouter.swift */,
+			);
+			path = Routes;
+			sourceTree = "<group>";
+		};
+		83EEA8BC2B68E2E600091203 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				83EEA8BD2B68E2E600091203 /* ModalTransition.swift */,
+				83EEA8BE2B68E2E600091203 /* Transition.swift */,
+				83EEA8BF2B68E2E600091203 /* EmptyTransition.swift */,
+				83EEA8C02B68E2E600091203 /* PushTransition.swift */,
+				83EEA8C12B68E2E600091203 /* Animated */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
+		83EEA8C12B68E2E600091203 /* Animated */ = {
+			isa = PBXGroup;
+			children = (
+				83EEA8C22B68E2E600091203 /* PicAnimatedTransition.swift */,
+				83EEA8C32B68E2E600091203 /* FadeAnimatedTransitioning.swift */,
+				83EEA8C42B68E2E600091203 /* AnimatedTransition.swift */,
+				83EEA8C52B68E2E600091203 /* NewAnimatedTransition.swift */,
+			);
+			path = Animated;
+			sourceTree = "<group>";
+		};
+		BD78F4A789C41B6A6AAA5833 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3410826907CAC30FC6503D89 /* Pods_RestFood.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +217,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83D0C40A2B6778FA005D9DC9 /* Build configuration list for PBXNativeTarget "RestFood" */;
 			buildPhases = (
+				36BA8E0F12E128BDEF83E563 /* [CP] Check Pods Manifest.lock */,
 				83D0C3F22B6778F9005D9DC9 /* Sources */,
 				83D0C3F32B6778F9005D9DC9 /* Frameworks */,
 				83D0C3F42B6778F9005D9DC9 /* Resources */,
+				1DF05C6B85A92287DF84F84C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,19 +272,82 @@
 			files = (
 				83D0C4062B6778FA005D9DC9 /* LaunchScreen.storyboard in Resources */,
 				83D0C4032B6778FA005D9DC9 /* Assets.xcassets in Resources */,
-				83D0C4012B6778F9005D9DC9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1DF05C6B85A92287DF84F84C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RestFood/Pods-RestFood-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RestFood/Pods-RestFood-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RestFood/Pods-RestFood-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36BA8E0F12E128BDEF83E563 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RestFood-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		83D0C3F22B6778F9005D9DC9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83D0C3FE2B6778F9005D9DC9 /* ViewController.swift in Sources */,
+				83C56E462B703C3600A3850C /* FoodDetailRouter.swift in Sources */,
+				8325049D2B72FB1000DEEDC1 /* FoodDetailModel.swift in Sources */,
+				83EEA8C92B68E2E600091203 /* Transition.swift in Sources */,
+				831F06402B6ACA770003D6A6 /* MainScreenViewController.swift in Sources */,
+				83B607B62B6ED01E00BBDF35 /* FoodDetailViewController.swift in Sources */,
+				83EEA8C82B68E2E600091203 /* ModalTransition.swift in Sources */,
+				831F06442B6ACABF0003D6A6 /* MainScreenModel.swift in Sources */,
+				83EEA8CF2B68E2E600091203 /* NewAnimatedTransition.swift in Sources */,
+				831F06462B6AECA20003D6A6 /* MainRouter.swift in Sources */,
+				83EEA8D32B68E30000091203 /* LoginRouter.swift in Sources */,
+				83EEA8CC2B68E2E600091203 /* PicAnimatedTransition.swift in Sources */,
+				83EEA8CA2B68E2E600091203 /* EmptyTransition.swift in Sources */,
+				83EEA8CD2B68E2E600091203 /* FadeAnimatedTransitioning.swift in Sources */,
+				83EEA8BA2B68E29C00091203 /* LoginModel.swift in Sources */,
+				83EEA8D12B68E2E600091203 /* DefaultRouter.swift in Sources */,
+				83EEA8B82B68E26100091203 /* LoginPresenter.swift in Sources */,
+				831F06422B6ACAB20003D6A6 /* MainScreenPresenter.swift in Sources */,
+				83D0C3FE2B6778F9005D9DC9 /* LoginViewController.swift in Sources */,
 				83D0C3FA2B6778F9005D9DC9 /* AppDelegate.swift in Sources */,
+				83EEA8D02B68E2E600091203 /* Router.swift in Sources */,
+				831F06492B6AF89A0003D6A6 /* CollectionViewCell.swift in Sources */,
+				83EEA8CE2B68E2E600091203 /* AnimatedTransition.swift in Sources */,
+				83C56E482B703D4100A3850C /* FoodDetailPresenter.swift in Sources */,
+				83EEA8CB2B68E2E600091203 /* PushTransition.swift in Sources */,
 				83D0C3FC2B6778F9005D9DC9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +355,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		83D0C3FF2B6778F9005D9DC9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				83D0C4002B6778F9005D9DC9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		83D0C4042B6778FA005D9DC9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -203,7 +403,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -266,7 +466,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -287,6 +487,7 @@
 		};
 		83D0C40B2B6778FA005D9DC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D75B7F023DA87304AA460F46 /* Pods-RestFood.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -297,7 +498,6 @@
 				INFOPLIST_FILE = RestFood/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -315,6 +515,7 @@
 		};
 		83D0C40C2B6778FA005D9DC9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 535F739F037DA879095B91F3 /* Pods-RestFood.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -325,7 +526,6 @@
 				INFOPLIST_FILE = RestFood/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
