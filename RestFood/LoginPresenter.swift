@@ -16,7 +16,7 @@ class LoginPresenter {
     weak var view: LoginViewControllerProtocol?
     var model: LoginModel!
     let router: Routes
-    typealias Routes = Closable & MainRoute
+    typealias Routes = Closable & CustomTabBarRouter
     required init(router: Routes, view: LoginViewControllerProtocol?, model: LoginModel) {
         self.router = router
         self.view = view
@@ -24,7 +24,7 @@ class LoginPresenter {
     }
     
     func openMain() {
-        router.openMain()
+        router.openCustomTabBar()
     }
     
 }

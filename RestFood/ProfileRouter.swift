@@ -1,23 +1,23 @@
 //
-//  MainRouter.swift
+//  ProfileRouter.swift
 //  RestFood
 //
-//  Created by Danil on 01.02.2024.
+//  Created by Danil on 23.02.2024.
 //
 
 import UIKit
 
-protocol MainRoute {
-    func openMain() -> UIViewController
+protocol ProfileRoute {
+    func openProfile() -> UIViewController
 }
 
-extension MainRoute where Self: Router {
+extension ProfileRoute where Self: Router {
     
-    func openMain() -> UIViewController {
+    func openProfile() -> UIViewController {
         let router = DefaultRouter(rootTransition: EmptyTransition())
-        let viewController = MainScreenViewController()
-        let model = MainScreenModel()
-        let presenter = MainScreenPresenter(router: router, view: viewController, model: model)
+        let viewController = ProfileViewController()
+        let model = ProfileModel()
+        let presenter = ProfilePresenter(router: router, view: viewController, model: model)
         viewController.presenter = presenter
         router.root = viewController
         let navigation = UINavigationController(rootViewController: viewController)
@@ -32,4 +32,4 @@ extension MainRoute where Self: Router {
     }
 }
 
-extension DefaultRouter: MainRoute {}
+extension DefaultRouter: ProfileRoute {}

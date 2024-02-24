@@ -27,7 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window?.rootViewController = router.openLoginStartScreen()
             window?.makeKeyAndVisible()
         case 1:
-            window?.rootViewController = router.openMainStartScreen()
+            window?.rootViewController = router.openTabBarStartScreen()
             window?.makeKeyAndVisible()
 //        case 2:
 //            window?.rootViewController = router.openCustomTabBarStartScreen()
