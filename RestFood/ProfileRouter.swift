@@ -22,8 +22,7 @@ extension ProfileRoute where Self: Router {
         router.root = viewController
         let navigation = UINavigationController(rootViewController: viewController)
         navigation.topViewController?.title = "title"
-        navigation.tabBarItem = UITabBarItem(title: "title", image: nil, tag: 0)
-        navigation.tabBarItem.image = UIImage(named: "user")
+        navigation.setNavigationBarHidden(true, animated: false)
         return navigation
     }
     

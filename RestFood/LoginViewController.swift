@@ -50,7 +50,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         setupViews()
         setupConstraints()
-        view.backgroundColor = .white
+        view.backgroundColor = #colorLiteral(red: 0.9803921569, green: 0.9411764706, blue: 0.7921568627, alpha: 1)
         
     }
     

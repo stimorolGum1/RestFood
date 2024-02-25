@@ -24,8 +24,10 @@ class CustomTabBar: UITabBarController {
         tabBar.layer.shadowRadius = 3
         tabBar.layer.masksToBounds = false
         tabBar.layer.cornerRadius = 4.0
-        tabBar.barTintColor = .white
+        tabBar.barTintColor = #colorLiteral(red: 0.9803921569, green: 0.9411764706, blue: 0.7921568627, alpha: 1)
+        tabBar.backgroundColor = #colorLiteral(red: 0.9803921569, green: 0.9411764706, blue: 0.5910779937, alpha: 1)
         tabBar.tintColor = .black
+        
     }
 }
 extension CustomTabBar: CustomTabBarProtocol {

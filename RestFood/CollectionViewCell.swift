@@ -24,6 +24,7 @@ class CollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         setupViews()
         setupConstraints()
+        self.backgroundColor = .gray
         self.layer.cornerRadius = 5
         self.layer.shadowRadius = 10
         self.layer.shadowOpacity = 0.3
@@ -46,6 +47,7 @@ class CollectionViewCell: UICollectionViewCell {
             make.top.equalTo(contentView.snp.top)
             make.bottom.equalTo(contentView.snp.bottom)
         }
+        
     }
 }
 

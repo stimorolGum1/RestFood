@@ -19,6 +19,7 @@
 		834F6E7A2B87874F00EACF43 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F6E792B87874F00EACF43 /* ProfilePresenter.swift */; };
 		834F6E7C2B8787AD00EACF43 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F6E7B2B8787AD00EACF43 /* ProfileModel.swift */; };
 		834F6E7E2B8792F600EACF43 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F6E7D2B8792F600EACF43 /* ProfileRouter.swift */; };
+		836DF5062B8B7B0C0024A319 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836DF5052B8B7B0C0024A319 /* TableViewCell.swift */; };
 		83B607B62B6ED01E00BBDF35 /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B607B52B6ED01E00BBDF35 /* FoodDetailViewController.swift */; };
 		83C56E462B703C3600A3850C /* FoodDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C56E452B703C3600A3850C /* FoodDetailRouter.swift */; };
 		83C56E482B703D4100A3850C /* FoodDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C56E472B703D4100A3850C /* FoodDetailPresenter.swift */; };
@@ -58,6 +59,7 @@
 		834F6E792B87874F00EACF43 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		834F6E7B2B8787AD00EACF43 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		834F6E7D2B8792F600EACF43 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
+		836DF5052B8B7B0C0024A319 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		83B607B52B6ED01E00BBDF35 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
 		83C56E452B703C3600A3850C /* FoodDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailRouter.swift; sourceTree = "<group>"; };
 		83C56E472B703D4100A3850C /* FoodDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailPresenter.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 		831F063E2B6ACA470003D6A6 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
+				836DF5042B8B7AAF0024A319 /* TableViewCell */,
 				831F06472B6AF8820003D6A6 /* CollectionViewCell */,
 				831F06452B6AECA20003D6A6 /* MainRouter.swift */,
 				831F063F2B6ACA770003D6A6 /* MainScreenViewController.swift */,
@@ -143,6 +146,14 @@
 				834F6E7B2B8787AD00EACF43 /* ProfileModel.swift */,
 			);
 			name = Profile;
+			sourceTree = "<group>";
+		};
+		836DF5042B8B7AAF0024A319 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				836DF5052B8B7B0C0024A319 /* TableViewCell.swift */,
+			);
+			name = TableViewCell;
 			sourceTree = "<group>";
 		};
 		83B607B42B6ECF9700BBDF35 /* FoodDetail */ = {
@@ -375,6 +386,7 @@
 				83EEA8CA2B68E2E600091203 /* EmptyTransition.swift in Sources */,
 				83EEA8CD2B68E2E600091203 /* FadeAnimatedTransitioning.swift in Sources */,
 				834F6E7C2B8787AD00EACF43 /* ProfileModel.swift in Sources */,
+				836DF5062B8B7B0C0024A319 /* TableViewCell.swift in Sources */,
 				83EEA8BA2B68E29C00091203 /* LoginModel.swift in Sources */,
 				83EEA8D12B68E2E600091203 /* DefaultRouter.swift in Sources */,
 				83EEA8B82B68E26100091203 /* LoginPresenter.swift in Sources */,

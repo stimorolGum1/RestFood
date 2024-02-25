@@ -11,7 +11,6 @@ import SnapKit
 protocol FoodDetailViewControllerProtocol: AnyObject {
     func updateFoodCount(count: Int)
 }
-
 class FoodDetailViewController: UIViewController {
     var presenter: FoodDetailPresenterProtocol!
     lazy var imageDetail: UIImageView = {
@@ -66,8 +65,7 @@ class FoodDetailViewController: UIViewController {
         return button
     }()
     override func viewDidLoad() {
-        //super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = #colorLiteral(red: 0.9803921569, green: 0.9411764706, blue: 0.7921568627, alpha: 1)
         setupViews()
         setupConstraints()
     }
