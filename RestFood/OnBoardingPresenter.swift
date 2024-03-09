@@ -6,13 +6,16 @@
 //
 
 protocol OnBoardingPresenterProtocol {
-    
+    func openLogin()
+    func createSlides()
+    var slides: [OnBoardingView] { get set }
 }
 class OnBoardingPresenter {
     weak var view: OnBoardingViewControllerProtocol?
     var model: OnBoardingModel!
+    var slides = [OnBoardingView]()
     let router: Routes
-    typealias Routes = Closable
+    typealias Routes = Closable & CustomTabBarRouter
     required init(router: Routes, view: OnBoardingViewControllerProtocol?, model: OnBoardingModel) {
         self.router = router
         self.view = view
@@ -21,5 +24,11 @@ class OnBoardingPresenter {
     
 }
 extension OnBoardingPresenter: OnBoardingPresenterProtocol {
-    
+    func openLogin() {
+        router.openCustomTabBar()
+    }
+    func createSlides() {
+        model?.createSlides()
+        slides = model!.slides
+    }
 }

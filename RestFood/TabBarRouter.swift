@@ -9,24 +9,39 @@ import UIKit
 
 protocol CustomTabBarRouter {
     func openCustomTabBar()
+    func openTabBarAsStartScreen() -> UIViewController
 }
 
 extension CustomTabBarRouter where Self: Router {
     func openCustomTabBar(with transition: Transition) {
         let router = DefaultRouter(rootTransition: transition)
-        let tabs = [router.openMain()]
         let tabbar = CustomTabBar()
-        tabbar.viewControllers = tabs
+        tabbar.viewControllers = [
+            generateVC(
+                viewController: router.openMainAsStartScreen(),
+                title: "",
+                image: UIImage(named: "home")?.withRenderingMode(.alwaysOriginal)
+            ),
+            generateVC(
+                viewController: router.openProfile(),
+                title: "",
+                image: UIImage(named: "profile")?.withRenderingMode(.alwaysOriginal)
+            ),
+            generateVC(viewController: router.openOrder(),
+                title: "",
+                image: UIImage(named: "order")?.withRenderingMode(.alwaysOriginal)
+                      )
+        ]
         router.root = tabbar
         route(to: tabbar, as: transition)
     }
 
-    func openTabBarStartScreen() -> UIViewController {
+    func openTabBarAsStartScreen() -> UIViewController {
         let router = DefaultRouter(rootTransition: EmptyTransition())
         let tabbar = CustomTabBar()
         tabbar.viewControllers = [
             generateVC(
-                viewController: router.openMain(),
+                viewController: router.openMainAsStartScreen(),
                 title: "",
                 image: UIImage(named: "home")?.withRenderingMode(.alwaysOriginal)
             ),

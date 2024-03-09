@@ -8,12 +8,23 @@
 import UIKit
 
 protocol MainRoute {
-    func openMain() -> UIViewController
+    func openMain()
+    func openMainAsStartScreen() -> UIViewController
 }
 
 extension MainRoute where Self: Router {
     
-    func openMain() -> UIViewController {
+    func openMain(with transition: Transition) {
+        let router = DefaultRouter(rootTransition: transition)
+        let viewController = MainScreenViewController()
+        let model = foodModel()
+        let presenter = MainScreenPresenter(router: router, view: viewController, model: model)
+        viewController.presenter = presenter
+        router.root = viewController
+        route(to: viewController, as: transition)
+    }
+    
+    func openMainAsStartScreen() -> UIViewController {
         let router = DefaultRouter(rootTransition: EmptyTransition())
         let viewController = MainScreenViewController()
         let model = foodModel()
@@ -21,6 +32,9 @@ extension MainRoute where Self: Router {
         viewController.presenter = presenter
         router.root = viewController
         return viewController
+    }
+    func openMain() {
+        openMain(with: AnimatedTransition(animatedTransition: FadeAnimatedTransitioning()))
     }
 }
 

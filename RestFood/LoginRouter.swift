@@ -9,7 +9,7 @@ import UIKit
 
 protocol LoginRoute {
     func openLogin()
-    func openLoginStartScreen() -> UIViewController
+    func openLoginAsStartScreen() -> UIViewController
 }
 
 extension LoginRoute where Self: Router {
@@ -22,7 +22,7 @@ extension LoginRoute where Self: Router {
         router.root = viewController
         route(to: viewController, as: transition)
     }
-    func openLoginStartScreen() -> UIViewController {
+    func openLoginAsStartScreen() -> UIViewController {
         let router = DefaultRouter(rootTransition: EmptyTransition())
         let viewController = LoginViewController()
         let model = LoginModel()
