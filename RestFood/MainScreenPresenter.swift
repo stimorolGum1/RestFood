@@ -7,31 +7,47 @@
 
 import Foundation
 protocol MainScreenPresenterProtocol: AnyObject {
-    func prepareElem(index: Int) -> String
-    func modelCount() -> Int
+    func prepareCategoriesForCollection(index: IndexPath) -> String
+    func prepareName(index: IndexPath) -> String
+    func modelCountForTableView(section: Int) -> Int
+    func modelCountForCollection() -> Int
     func openDetailFood()
+    func modelSection(section: Int) -> String
+    func prepareCost(index: IndexPath) -> String
 }
 
 class MainScreenPresenter {
     
     weak var view: MainScreenViewControllerProtocol?
-    var model: MainScreenModel!
+    var model: foodModel!
+   
     let router: Routes
     typealias Routes = Closable & FoodDetailRoute
-    required init(router: Routes, view: MainScreenViewControllerProtocol?, model: MainScreenModel) {
+    required init(router: Routes, view: MainScreenViewControllerProtocol?, model: foodModel) {
         self.router = router
         self.view = view
         self.model = model
     }
-    func prepareElem(index: Int) -> String {
-        return model.elem[index]
-    }
-    func modelCount() -> Int {
-        return model.elem.count
-    }
-    
 }
 extension MainScreenPresenter: MainScreenPresenterProtocol {
+    func prepareCost(index: IndexPath) -> String {
+        return "$ \(String(model.foodCategories[index.section].foods[index.row].price))"
+    }
+    func prepareCategoriesForCollection(index: IndexPath) -> String {
+        return model.foodCategories[index.item].name
+    }
+    func modelSection(section: Int) -> String {
+        return model.foodCategories[section].name
+    }
+    func modelCountForCollection() -> Int {
+        return model.foodCategories.count
+    }
+    func prepareName(index: IndexPath) -> String {
+        return model.foodCategories[index.section].foods[index.row].name
+    }
+    func modelCountForTableView(section: Int) -> Int {
+        return model.foodCategories[section].foods.count
+    }
     func openDetailFood() {
         router.openFoodDetail()
     }

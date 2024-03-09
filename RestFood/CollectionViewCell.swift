@@ -16,6 +16,8 @@ class CollectionViewCell: UICollectionViewCell {
     lazy var foodName: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
+        label.numberOfLines = 0
+        label.lineBreakMode = .byWordWrapping
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -42,12 +44,8 @@ class CollectionViewCell: UICollectionViewCell {
     
     func setupConstraints() {
         foodName.snp.makeConstraints { make in
-            make.leading.equalTo(contentView.snp.leading)
-            make.trailing.equalTo(contentView.snp.trailing)
-            make.top.equalTo(contentView.snp.top)
-            make.bottom.equalTo(contentView.snp.bottom)
+            make.edges.equalToSuperview().inset(5)
         }
-        
     }
 }
 

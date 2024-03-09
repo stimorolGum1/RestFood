@@ -23,11 +23,13 @@ class FoodDetailViewController: UIViewController {
         let label = UILabel()
         label.text = "Food"
         label.font = UIFont.boldSystemFont(ofSize: 25.0)
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     lazy var foodDetailLabel: UILabel = {
         let label = UILabel()
         label.text = "Krutaya eda na sve vremena"
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     lazy var countOfItem: UILabel = {
@@ -35,6 +37,7 @@ class FoodDetailViewController: UIViewController {
         label.text = "1"
         label.textAlignment = .center
         label.backgroundColor = .gray
+        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     lazy var addPlus: UIButton = {
@@ -44,6 +47,7 @@ class FoodDetailViewController: UIViewController {
         button.layer.cornerRadius = 5
         button.layer.maskedCorners = [.layerMaxXMinYCorner]
         button.addTarget(self, action: #selector(addFood), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     lazy var addMinus: UIButton = {
@@ -53,6 +57,7 @@ class FoodDetailViewController: UIViewController {
         button.layer.cornerRadius = 5
         button.layer.maskedCorners = [.layerMinXMinYCorner]
         button.addTarget(self, action: #selector(removeFood), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     lazy var addToCartButton: UIButton = {
@@ -62,6 +67,7 @@ class FoodDetailViewController: UIViewController {
         button.layer.cornerRadius = 5
         button.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
         button.addTarget(self, action: #selector(addToCart), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     override func viewDidLoad() {
@@ -73,17 +79,17 @@ class FoodDetailViewController: UIViewController {
         view.addSubview(imageDetail)
         view.addSubview(foodLabel)
         view.addSubview(foodDetailLabel)
-        view.addSubview(countOfItem)
         view.addSubview(addPlus)
         view.addSubview(addMinus)
         view.addSubview(addToCartButton)
+        view.addSubview(countOfItem)
     }
     func setupConstraints() {
         imageDetail.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide)
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
-            make.height.equalTo(200)
+            make.height.equalTo(400)
         }
         foodLabel.snp.makeConstraints { make in
             make.leading.equalTo(10)
@@ -97,31 +103,30 @@ class FoodDetailViewController: UIViewController {
             make.top.equalTo(foodLabel.snp.bottom).offset(10)
             make.height.equalTo(50)
         }
+        addToCartButton.snp.makeConstraints { make in
+            make.leading.equalTo(10)
+            make.trailing.equalTo(-10)
+            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-30)
+            make.height.equalTo(40)
+        }
         countOfItem.snp.makeConstraints { make in
             make.centerX.equalTo(addToCartButton.snp.centerX)
             make.bottom.equalTo(addToCartButton.snp.top).offset(0)
             make.height.equalTo(40)
-            make.width.equalTo(300)
+            make.leading.equalTo(50)
+            make.trailing.equalTo(-50)
         }
         addPlus.snp.makeConstraints { make in
-            make.leading.equalTo(countOfItem.snp.trailing)
-            make.trailing.equalTo(-5)
+            make.trailing.equalTo(-10)
             make.bottom.equalTo(addToCartButton.snp.top).offset(0)
             make.height.equalTo(40)
             make.width.equalTo(40)
         }
         addMinus.snp.makeConstraints { make in
-            make.trailing.equalTo(countOfItem.snp.leading)
-            make.leading.equalTo(5)
+            make.leading.equalTo(10)
             make.bottom.equalTo(addToCartButton.snp.top).offset(0)
             make.height.equalTo(40)
             make.width.equalTo(40)
-        }
-        addToCartButton.snp.makeConstraints { make in
-            make.leading.equalTo(5)
-            make.trailing.equalTo(-5)
-            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-30)
-            make.height.equalTo(40)
         }
     }
     @objc func addFood() {

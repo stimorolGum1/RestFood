@@ -29,9 +29,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         case 1:
             window?.rootViewController = router.openTabBarStartScreen()
             window?.makeKeyAndVisible()
-//        case 2:
-//            window?.rootViewController = router.openCustomTabBarStartScreen()
-//            window?.makeKeyAndVisible()
+        case 2:
+            window?.rootViewController = router.StartScreenStartScreen()
+            window?.makeKeyAndVisible()
         default:
             break
         }

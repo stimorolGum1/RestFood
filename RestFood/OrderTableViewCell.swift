@@ -1,16 +1,16 @@
 //
-//  TableViewCell.swift
+//  OrderTableViewCell.swift
 //  RestFood
 //
-//  Created by Danil on 25.02.2024.
+//  Created by Danil on 09.03.2024.
 //
 
 import UIKit
 import SnapKit
-protocol TableViewCellProtocol {
+protocol OrderTableViewCellProtocol {
     
 }
-class TableViewCell: UITableViewCell {
+class OrderTableViewCell: UITableViewCell {
     lazy var cellView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
@@ -114,6 +114,6 @@ class TableViewCell: UITableViewCell {
         }
 
 }
-extension TableViewCell: TableViewCellProtocol {
+extension OrderTableViewCell: OrderTableViewCellProtocol {
     
 }

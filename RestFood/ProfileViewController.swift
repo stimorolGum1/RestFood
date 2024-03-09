@@ -70,7 +70,7 @@ class ProfileViewController: UIViewController {
     
     
     override func viewDidLoad() {
-        view.backgroundColor = #colorLiteral(red: 0.9803921569, green: 0.9411764706, blue: 0.7921568627, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0.9960784314, green: 0.9882352941, blue: 0.8470588235, alpha: 1)
         setupViews()
         setupConstraints()
     }

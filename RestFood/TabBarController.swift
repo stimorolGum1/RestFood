@@ -14,7 +14,6 @@ class CustomTabBar: UITabBarController {
     var tabs = [UIViewController]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabBar.backgroundColor = .white
         setupViews()
     }
     func setupViews() {
@@ -23,9 +22,9 @@ class CustomTabBar: UITabBarController {
         tabBar.layer.shadowOpacity = 5
         tabBar.layer.shadowRadius = 3
         tabBar.layer.masksToBounds = false
-        tabBar.layer.cornerRadius = 4.0
+        tabBar.layer.cornerRadius = 24
         tabBar.barTintColor = #colorLiteral(red: 0.9803921569, green: 0.9411764706, blue: 0.7921568627, alpha: 1)
-        tabBar.backgroundColor = #colorLiteral(red: 0.9803921569, green: 0.9411764706, blue: 0.5910779937, alpha: 1)
+        tabBar.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         tabBar.tintColor = .black
         
     }

@@ -20,10 +20,7 @@ extension ProfileRoute where Self: Router {
         let presenter = ProfilePresenter(router: router, view: viewController, model: model)
         viewController.presenter = presenter
         router.root = viewController
-        let navigation = UINavigationController(rootViewController: viewController)
-        navigation.topViewController?.title = "title"
-        navigation.setNavigationBarHidden(true, animated: false)
-        return navigation
+        return viewController
     }
     
     func selectListTab() {
