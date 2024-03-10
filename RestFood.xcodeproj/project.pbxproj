@@ -31,6 +31,11 @@
 		836DF5062B8B7B0C0024A319 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836DF5052B8B7B0C0024A319 /* TableViewCell.swift */; };
 		839C4E722B9CBFF9001FA1F0 /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839C4E712B9CBFF8001FA1F0 /* OnboardingRouter.swift */; };
 		839C4E742B9CC0AE001FA1F0 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839C4E732B9CC0AE001FA1F0 /* OnBoardingView.swift */; };
+		839ECC842B9D8B0E00FA504C /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839ECC832B9D8B0E00FA504C /* PurchaseViewController.swift */; };
+		839ECC862B9D8B1B00FA504C /* PurchasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839ECC852B9D8B1B00FA504C /* PurchasePresenter.swift */; };
+		839ECC882B9D8B2A00FA504C /* PurchaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839ECC872B9D8B2A00FA504C /* PurchaseModel.swift */; };
+		839ECC8B2B9D8B8400FA504C /* ViewLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839ECC8A2B9D8B8400FA504C /* ViewLogin.swift */; };
+		839ECC8D2B9D8D6D00FA504C /* viewReg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839ECC8C2B9D8D6D00FA504C /* viewReg.swift */; };
 		83AB95122B9C91FF00573A3E /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AB95112B9C91FF00573A3E /* OrderViewController.swift */; };
 		83AB95142B9C920D00573A3E /* OrderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AB95132B9C920D00573A3E /* OrderPresenter.swift */; };
 		83AB95162B9C921500573A3E /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AB95152B9C921500573A3E /* OrderModel.swift */; };
@@ -86,6 +91,11 @@
 		836DF5052B8B7B0C0024A319 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		839C4E712B9CBFF8001FA1F0 /* OnboardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
 		839C4E732B9CC0AE001FA1F0 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
+		839ECC832B9D8B0E00FA504C /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
+		839ECC852B9D8B1B00FA504C /* PurchasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasePresenter.swift; sourceTree = "<group>"; };
+		839ECC872B9D8B2A00FA504C /* PurchaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseModel.swift; sourceTree = "<group>"; };
+		839ECC8A2B9D8B8400FA504C /* ViewLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLogin.swift; sourceTree = "<group>"; };
+		839ECC8C2B9D8D6D00FA504C /* viewReg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewReg.swift; sourceTree = "<group>"; };
 		83AB95112B9C91FF00573A3E /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		83AB95132B9C920D00573A3E /* OrderPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPresenter.swift; sourceTree = "<group>"; };
 		83AB95152B9C921500573A3E /* OrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
@@ -239,6 +249,9 @@
 		839C4E6C2B9CBDA8001FA1F0 /* Purchase */ = {
 			isa = PBXGroup;
 			children = (
+				839ECC832B9D8B0E00FA504C /* PurchaseViewController.swift */,
+				839ECC852B9D8B1B00FA504C /* PurchasePresenter.swift */,
+				839ECC872B9D8B2A00FA504C /* PurchaseModel.swift */,
 			);
 			name = Purchase;
 			sourceTree = "<group>";
@@ -266,6 +279,29 @@
 			name = OnBoardingView;
 			sourceTree = "<group>";
 		};
+		839C4E762B9CCAAB001FA1F0 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Storage;
+			sourceTree = "<group>";
+		};
+		839C4E772B9CCABB001FA1F0 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Cart;
+			sourceTree = "<group>";
+		};
+		839ECC892B9D8B6500FA504C /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				839ECC8A2B9D8B8400FA504C /* ViewLogin.swift */,
+				839ECC8C2B9D8D6D00FA504C /* viewReg.swift */,
+			);
+			name = LoginView;
+			sourceTree = "<group>";
+		};
 		83B607B42B6ECF9700BBDF35 /* FoodDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,10 +316,11 @@
 		83BF4FC92B67C08B00546F04 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				83EEA8D22B68E30000091203 /* LoginRouter.swift */,
+				839ECC892B9D8B6500FA504C /* LoginView */,
 				83D0C3FD2B6778F9005D9DC9 /* LoginViewController.swift */,
 				83EEA8B72B68E26100091203 /* LoginPresenter.swift */,
 				83EEA8B92B68E29C00091203 /* LoginModel.swift */,
+				83EEA8D22B68E30000091203 /* LoginRouter.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -309,6 +346,8 @@
 		83D0C3F82B6778F9005D9DC9 /* RestFood */ = {
 			isa = PBXGroup;
 			children = (
+				839C4E772B9CCABB001FA1F0 /* Cart */,
+				839C4E762B9CCAAB001FA1F0 /* Storage */,
 				839C4E702B9CBDE0001FA1F0 /* Extensions */,
 				839C4E6D2B9CBDC2001FA1F0 /* Enums */,
 				839C4E6C2B9CBDA8001FA1F0 /* Purchase */,
@@ -487,6 +526,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				834F6E742B877B5500EACF43 /* TabBarRouter.swift in Sources */,
+				839ECC862B9D8B1B00FA504C /* PurchasePresenter.swift in Sources */,
 				83C56E462B703C3600A3850C /* FoodDetailRouter.swift in Sources */,
 				834F6E722B877B4400EACF43 /* TabBarController.swift in Sources */,
 				8341BCA72B992DED00349090 /* StartScreenViewController.swift in Sources */,
@@ -503,6 +543,7 @@
 				83EEA8C82B68E2E600091203 /* ModalTransition.swift in Sources */,
 				831F06442B6ACABF0003D6A6 /* MainScreenModel.swift in Sources */,
 				83EEA8CF2B68E2E600091203 /* NewAnimatedTransition.swift in Sources */,
+				839ECC842B9D8B0E00FA504C /* PurchaseViewController.swift in Sources */,
 				831F06462B6AECA20003D6A6 /* MainRouter.swift in Sources */,
 				83EEA8D32B68E30000091203 /* LoginRouter.swift in Sources */,
 				83AB95142B9C920D00573A3E /* OrderPresenter.swift in Sources */,
@@ -511,6 +552,7 @@
 				83EEA8CD2B68E2E600091203 /* FadeAnimatedTransitioning.swift in Sources */,
 				834F6E7C2B8787AD00EACF43 /* ProfileModel.swift in Sources */,
 				839C4E722B9CBFF9001FA1F0 /* OnboardingRouter.swift in Sources */,
+				839ECC8B2B9D8B8400FA504C /* ViewLogin.swift in Sources */,
 				832A692C2B98AE2E0071B6FD /* OnBoardingPresenter.swift in Sources */,
 				836DF5062B8B7B0C0024A319 /* TableViewCell.swift in Sources */,
 				83AB95162B9C921500573A3E /* OrderModel.swift in Sources */,
@@ -518,6 +560,7 @@
 				83EEA8BA2B68E29C00091203 /* LoginModel.swift in Sources */,
 				83EEA8D12B68E2E600091203 /* DefaultRouter.swift in Sources */,
 				83EEA8B82B68E26100091203 /* LoginPresenter.swift in Sources */,
+				839ECC882B9D8B2A00FA504C /* PurchaseModel.swift in Sources */,
 				834F6E782B8786A800EACF43 /* ProfileViewController.swift in Sources */,
 				831F06422B6ACAB20003D6A6 /* MainScreenPresenter.swift in Sources */,
 				8341BCAF2B99F70D00349090 /* CustomUITextField.swift in Sources */,
@@ -531,6 +574,7 @@
 				83EEA8CE2B68E2E600091203 /* AnimatedTransition.swift in Sources */,
 				83C56E482B703D4100A3850C /* FoodDetailPresenter.swift in Sources */,
 				83EEA8CB2B68E2E600091203 /* PushTransition.swift in Sources */,
+				839ECC8D2B9D8D6D00FA504C /* viewReg.swift in Sources */,
 				832A692A2B98AD800071B6FD /* OnBoardingViewController.swift in Sources */,
 				83D0C3FC2B6778F9005D9DC9 /* SceneDelegate.swift in Sources */,
 			);
