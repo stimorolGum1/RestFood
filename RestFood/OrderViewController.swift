@@ -38,9 +38,13 @@ class OrderViewController: UIViewController {
         button.backgroundColor = #colorLiteral(red: 1, green: 0.2704343498, blue: 0.1398084164, alpha: 1)
         button.layer.cornerRadius = 10
         button.translatesAutoresizingMaskIntoConstraints = false
-        //button.addTarget(self, action: #selector(wrongAuth), for: .touchUpInside)
+        button.addTarget(self, action: #selector(openPurchase), for: .touchUpInside)
         return button
     }()
+    
+    @objc func openPurchase() {
+        presenter.openPurchase()
+    }
     
     override func viewDidLoad() {
         view.backgroundColor = #colorLiteral(red: 0.9960784314, green: 0.9882352941, blue: 0.8470588235, alpha: 1)

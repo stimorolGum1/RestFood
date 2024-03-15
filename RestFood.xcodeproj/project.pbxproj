@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		831AA25D2BA4674400043A62 /* PaymentMethodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831AA25C2BA4674400043A62 /* PaymentMethodCell.swift */; };
+		831AA2602BA480CB00043A62 /* ScannerVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831AA25F2BA480CB00043A62 /* ScannerVIewController.swift */; };
+		831AA2622BA480E900043A62 /* ScannerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831AA2612BA480E900043A62 /* ScannerPresenter.swift */; };
+		831AA2642BA4810400043A62 /* ScannerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831AA2632BA4810400043A62 /* ScannerModel.swift */; };
+		831AA2662BA4811200043A62 /* ScannerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831AA2652BA4811200043A62 /* ScannerRouter.swift */; };
 		831F06402B6ACA770003D6A6 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831F063F2B6ACA770003D6A6 /* MainScreenViewController.swift */; };
 		831F06422B6ACAB20003D6A6 /* MainScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831F06412B6ACAB20003D6A6 /* MainScreenPresenter.swift */; };
 		831F06442B6ACABF0003D6A6 /* MainScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831F06432B6ACABF0003D6A6 /* MainScreenModel.swift */; };
@@ -16,6 +21,7 @@
 		832A692A2B98AD800071B6FD /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832A69292B98AD800071B6FD /* OnBoardingViewController.swift */; };
 		832A692C2B98AE2E0071B6FD /* OnBoardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832A692B2B98AE2E0071B6FD /* OnBoardingPresenter.swift */; };
 		832A692E2B98AE5D0071B6FD /* OnBoardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832A692D2B98AE5D0071B6FD /* OnBoardingModel.swift */; };
+		832C86062B9E867C006F219F /* PurchaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832C86052B9E867C006F219F /* PurchaseRouter.swift */; };
 		8341BCA72B992DED00349090 /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8341BCA62B992DED00349090 /* StartScreenViewController.swift */; };
 		8341BCA92B992E0000349090 /* StartScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8341BCA82B992E0000349090 /* StartScreenPresenter.swift */; };
 		8341BCAB2B992E1000349090 /* StartScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8341BCAA2B992E1000349090 /* StartScreenModel.swift */; };
@@ -67,6 +73,11 @@
 /* Begin PBXFileReference section */
 		3410826907CAC30FC6503D89 /* Pods_RestFood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestFood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		535F739F037DA879095B91F3 /* Pods-RestFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestFood.release.xcconfig"; path = "Target Support Files/Pods-RestFood/Pods-RestFood.release.xcconfig"; sourceTree = "<group>"; };
+		831AA25C2BA4674400043A62 /* PaymentMethodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodCell.swift; sourceTree = "<group>"; };
+		831AA25F2BA480CB00043A62 /* ScannerVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerVIewController.swift; sourceTree = "<group>"; };
+		831AA2612BA480E900043A62 /* ScannerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerPresenter.swift; sourceTree = "<group>"; };
+		831AA2632BA4810400043A62 /* ScannerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerModel.swift; sourceTree = "<group>"; };
+		831AA2652BA4811200043A62 /* ScannerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerRouter.swift; sourceTree = "<group>"; };
 		831F063F2B6ACA770003D6A6 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		831F06412B6ACAB20003D6A6 /* MainScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenPresenter.swift; sourceTree = "<group>"; };
 		831F06432B6ACABF0003D6A6 /* MainScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenModel.swift; sourceTree = "<group>"; };
@@ -76,6 +87,7 @@
 		832A69292B98AD800071B6FD /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		832A692B2B98AE2E0071B6FD /* OnBoardingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPresenter.swift; sourceTree = "<group>"; };
 		832A692D2B98AE5D0071B6FD /* OnBoardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingModel.swift; sourceTree = "<group>"; };
+		832C86052B9E867C006F219F /* PurchaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseRouter.swift; sourceTree = "<group>"; };
 		8341BCA62B992DED00349090 /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 		8341BCA82B992E0000349090 /* StartScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenPresenter.swift; sourceTree = "<group>"; };
 		8341BCAA2B992E1000349090 /* StartScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenModel.swift; sourceTree = "<group>"; };
@@ -147,6 +159,25 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		831AA25B2BA466F000043A62 /* PaymentMethodCell */ = {
+			isa = PBXGroup;
+			children = (
+				831AA25C2BA4674400043A62 /* PaymentMethodCell.swift */,
+			);
+			name = PaymentMethodCell;
+			sourceTree = "<group>";
+		};
+		831AA25E2BA47C0F00043A62 /* ScannerView */ = {
+			isa = PBXGroup;
+			children = (
+				831AA25F2BA480CB00043A62 /* ScannerVIewController.swift */,
+				831AA2612BA480E900043A62 /* ScannerPresenter.swift */,
+				831AA2632BA4810400043A62 /* ScannerModel.swift */,
+				831AA2652BA4811200043A62 /* ScannerRouter.swift */,
+			);
+			name = ScannerView;
+			sourceTree = "<group>";
+		};
 		831F063E2B6ACA470003D6A6 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +225,27 @@
 				834F6E7B2B8787AD00EACF43 /* ProfileModel.swift */,
 			);
 			name = Profile;
+			sourceTree = "<group>";
+		};
+		83566CFF2BA32B120089E461 /* PurchaseStatusView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = PurchaseStatusView;
+			sourceTree = "<group>";
+		};
+		83566D002BA32B320089E461 /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = LocationManager;
+			sourceTree = "<group>";
+		};
+		83566D012BA32B410089E461 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = NetworkManager;
 			sourceTree = "<group>";
 		};
 		8358B0DD2B9C982A0085F1DE /* OrderTableViewCell */ = {
@@ -249,9 +301,12 @@
 		839C4E6C2B9CBDA8001FA1F0 /* Purchase */ = {
 			isa = PBXGroup;
 			children = (
+				831AA25B2BA466F000043A62 /* PaymentMethodCell */,
+				83566CFF2BA32B120089E461 /* PurchaseStatusView */,
 				839ECC832B9D8B0E00FA504C /* PurchaseViewController.swift */,
 				839ECC852B9D8B1B00FA504C /* PurchasePresenter.swift */,
 				839ECC872B9D8B2A00FA504C /* PurchaseModel.swift */,
+				832C86052B9E867C006F219F /* PurchaseRouter.swift */,
 			);
 			name = Purchase;
 			sourceTree = "<group>";
@@ -279,18 +334,11 @@
 			name = OnBoardingView;
 			sourceTree = "<group>";
 		};
-		839C4E762B9CCAAB001FA1F0 /* Storage */ = {
+		839C4E762B9CCAAB001FA1F0 /* CacheManager */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Storage;
-			sourceTree = "<group>";
-		};
-		839C4E772B9CCABB001FA1F0 /* Cart */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Cart;
+			name = CacheManager;
 			sourceTree = "<group>";
 		};
 		839ECC892B9D8B6500FA504C /* LoginView */ = {
@@ -346,8 +394,10 @@
 		83D0C3F82B6778F9005D9DC9 /* RestFood */ = {
 			isa = PBXGroup;
 			children = (
-				839C4E772B9CCABB001FA1F0 /* Cart */,
-				839C4E762B9CCAAB001FA1F0 /* Storage */,
+				831AA25E2BA47C0F00043A62 /* ScannerView */,
+				83566D012BA32B410089E461 /* NetworkManager */,
+				83566D002BA32B320089E461 /* LocationManager */,
+				839C4E762B9CCAAB001FA1F0 /* CacheManager */,
 				839C4E702B9CBDE0001FA1F0 /* Extensions */,
 				839C4E6D2B9CBDC2001FA1F0 /* Enums */,
 				839C4E6C2B9CBDA8001FA1F0 /* Purchase */,
@@ -533,7 +583,9 @@
 				83AB95122B9C91FF00573A3E /* OrderViewController.swift in Sources */,
 				834F6E7E2B8792F600EACF43 /* ProfileRouter.swift in Sources */,
 				8358B0DF2B9C984E0085F1DE /* OrderTableViewCell.swift in Sources */,
+				831AA2642BA4810400043A62 /* ScannerModel.swift in Sources */,
 				8325049D2B72FB1000DEEDC1 /* FoodDetailModel.swift in Sources */,
+				831AA25D2BA4674400043A62 /* PaymentMethodCell.swift in Sources */,
 				83EEA8C92B68E2E600091203 /* Transition.swift in Sources */,
 				831F06402B6ACA770003D6A6 /* MainScreenViewController.swift in Sources */,
 				8341BCAB2B992E1000349090 /* StartScreenModel.swift in Sources */,
@@ -542,6 +594,7 @@
 				83B607B62B6ED01E00BBDF35 /* FoodDetailViewController.swift in Sources */,
 				83EEA8C82B68E2E600091203 /* ModalTransition.swift in Sources */,
 				831F06442B6ACABF0003D6A6 /* MainScreenModel.swift in Sources */,
+				832C86062B9E867C006F219F /* PurchaseRouter.swift in Sources */,
 				83EEA8CF2B68E2E600091203 /* NewAnimatedTransition.swift in Sources */,
 				839ECC842B9D8B0E00FA504C /* PurchaseViewController.swift in Sources */,
 				831F06462B6AECA20003D6A6 /* MainRouter.swift in Sources */,
@@ -550,6 +603,7 @@
 				83EEA8CC2B68E2E600091203 /* PicAnimatedTransition.swift in Sources */,
 				83EEA8CA2B68E2E600091203 /* EmptyTransition.swift in Sources */,
 				83EEA8CD2B68E2E600091203 /* FadeAnimatedTransitioning.swift in Sources */,
+				831AA2622BA480E900043A62 /* ScannerPresenter.swift in Sources */,
 				834F6E7C2B8787AD00EACF43 /* ProfileModel.swift in Sources */,
 				839C4E722B9CBFF9001FA1F0 /* OnboardingRouter.swift in Sources */,
 				839ECC8B2B9D8B8400FA504C /* ViewLogin.swift in Sources */,
@@ -566,11 +620,13 @@
 				8341BCAF2B99F70D00349090 /* CustomUITextField.swift in Sources */,
 				83D0C3FE2B6778F9005D9DC9 /* LoginViewController.swift in Sources */,
 				83AB95182B9C922100573A3E /* OrderRouter.swift in Sources */,
+				831AA2662BA4811200043A62 /* ScannerRouter.swift in Sources */,
 				834F6E7A2B87874F00EACF43 /* ProfilePresenter.swift in Sources */,
 				832A692E2B98AE5D0071B6FD /* OnBoardingModel.swift in Sources */,
 				83D0C3FA2B6778F9005D9DC9 /* AppDelegate.swift in Sources */,
 				83EEA8D02B68E2E600091203 /* Router.swift in Sources */,
 				831F06492B6AF89A0003D6A6 /* CollectionViewCell.swift in Sources */,
+				831AA2602BA480CB00043A62 /* ScannerVIewController.swift in Sources */,
 				83EEA8CE2B68E2E600091203 /* AnimatedTransition.swift in Sources */,
 				83C56E482B703D4100A3850C /* FoodDetailPresenter.swift in Sources */,
 				83EEA8CB2B68E2E600091203 /* PushTransition.swift in Sources */,
