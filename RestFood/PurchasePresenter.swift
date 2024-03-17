@@ -7,13 +7,13 @@
 
 import Foundation
 protocol PurchasePresenterProtocol {
-
+    func openScanner()
 }
 class PurchasePresenter {
     weak var view: PurchaseViewControllerProtocol?
     var model: PurchaseModel!
     let router: Routes
-    typealias Routes = Closable
+    typealias Routes = Closable & ScannerRoute
     required init(router: Routes, view: PurchaseViewControllerProtocol?, model: PurchaseModel) {
         self.router = router
         self.view = view
@@ -22,5 +22,9 @@ class PurchasePresenter {
     
 }
 extension PurchasePresenter: PurchasePresenterProtocol {
-
+    func openScanner() {
+        router.openScanner()
+    }
+    
+    
 }

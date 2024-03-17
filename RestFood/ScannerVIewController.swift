@@ -5,8 +5,8 @@
 //  Created by Danil on 15.03.2024.
 //
 
-import Foundation
 import UIKit
+import AVFoundation
 protocol ScannerViewControllerProtocol: AnyObject {
     
 }
@@ -25,5 +25,8 @@ class ScannerViewController: UIViewController {
     }
 }
 extension ScannerViewController: ScannerViewControllerProtocol {
+    
+}
+extension ScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
     
 }

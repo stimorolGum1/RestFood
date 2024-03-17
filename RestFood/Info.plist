@@ -4,6 +4,8 @@
 <dict>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
+		<key>NSCameraUsageDescription</key>
+		<string>Pleace allow cam for scan QR core</string>
 		<key>UIApplicationSupportsTabbedSceneCollection</key>
 		<false/>
 		<key>UIApplicationSupportsMultipleScenes</key>

@@ -64,6 +64,7 @@ class PurchaseViewController: UIViewController {
         button.setTitle("Scan QR", for: .normal)
         button.backgroundColor = #colorLiteral(red: 1, green: 0.2704343498, blue: 0.1398084164, alpha: 1)
         button.layer.cornerRadius = 10
+        button.addTarget(self, action: #selector(openScanner), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -204,6 +205,9 @@ class PurchaseViewController: UIViewController {
             make.height.equalTo(40)
             make.width.equalToSuperview().dividedBy(2).offset(5)
         }
+    }
+    @objc func openScanner() {
+        presenter.openScanner()
     }
 }
 extension PurchaseViewController: PurchaseViewControllerProtocol {
