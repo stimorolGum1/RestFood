@@ -86,7 +86,7 @@ class ViewReg: UIView {
     lazy var backToSignIn: UIButton = {
         let button = UIButton()
         button.backgroundColor = #colorLiteral(red: 1, green: 0.2704343498, blue: 0.1398084164, alpha: 1)
-        button.layer.cornerRadius = 10
+        button.layer.cornerRadius = 15
         button.setImage(UIImage(systemName: "xmark"), for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button

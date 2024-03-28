@@ -8,8 +8,8 @@
 import UIKit
 
 protocol StartScreenRoute {
-    func openLogin()
-    func openLoginAsStartScreen() -> UIViewController
+    func openStartScreen()
+    func StartScreenAsStartScreen() -> UIViewController
 }
 
 extension StartScreenRoute where Self: Router {

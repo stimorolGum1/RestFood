@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let checkScreen = 0
         switch checkScreen {
         case 0:
-            window?.rootViewController = router.openLoginAsStartScreen()
+            window?.rootViewController = router.openSignInUpAsStartScreen()
             window?.makeKeyAndVisible()
         case 1:
             window?.rootViewController = router.StartScreenAsStartScreen()

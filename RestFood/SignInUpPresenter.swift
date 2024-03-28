@@ -1,5 +1,5 @@
 //
-//  LoginPresenter.swift
+//  SignInUpPresenter.swift
 //  RestFood
 //
 //  Created by Danil on 30.01.2024.
@@ -7,25 +7,25 @@
 
 import Foundation
 
-protocol LoginPresenterProtocol: AnyObject {
+protocol SignInUpPresenterProtocol: AnyObject {
     func openMain()
     func openOnboarding()
 }
 
-class LoginPresenter {
+class SignInUpPresenter {
     
-    weak var view: LoginViewControllerProtocol?
-    var model: LoginModel!
+    weak var view: SignInUpViewControllerProtocol?
+    var model: SignInUpModel!
     let router: Routes
     typealias Routes = Closable & CustomTabBarRouter & OnBoardingRoute
-    required init(router: Routes, view: LoginViewControllerProtocol?, model: LoginModel) {
+    required init(router: Routes, view: SignInUpViewControllerProtocol?, model: SignInUpModel) {
         self.router = router
         self.view = view
         self.model = model
     }
 }
 
-extension LoginPresenter: LoginPresenterProtocol {
+extension SignInUpPresenter: SignInUpPresenterProtocol {
     func openMain() {
         router.openCustomTabBar()
     }

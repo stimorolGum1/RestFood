@@ -8,12 +8,12 @@
 import UIKit
 import SnapKit
 
-protocol LoginViewControllerProtocol: AnyObject {
+protocol SignInUpViewControllerProtocol: AnyObject {
     
 }
 
-class LoginViewController: UIViewController {
-    var presenter: LoginPresenterProtocol!
+class SignInUpViewController: UIViewController {
+    var presenter: SignInUpPresenterProtocol!
     lazy var viewLogin: ViewLogin = {
         let view = ViewLogin()
         view.alpha = 0.0
@@ -48,6 +48,8 @@ class LoginViewController: UIViewController {
         setupViews()
         setupConstraints()
         setupAnimate()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        view.addGestureRecognizer(tapGesture)
     }
     func setupViews() {
         view.addSubview(viewLogin)
@@ -69,11 +71,16 @@ class LoginViewController: UIViewController {
             make.trailing.equalTo(-15)
         }
     }
+    
     func setupAnimate() {
         UIView.animate(withDuration: 1, animations: { [weak self] in
             self?.viewLogin.alpha = 1
         })
     }
+    @objc func handleTap() {
+        view.endEditing(true)
+    }
+
     @objc func authOk() {
         presenter.openOnboarding()
     }
@@ -108,5 +115,5 @@ class LoginViewController: UIViewController {
         })
     }
 }
-extension LoginViewController: LoginViewControllerProtocol {
+extension SignInUpViewController: SignInUpViewControllerProtocol {
 }
