@@ -83,6 +83,14 @@ class ViewReg: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
+    lazy var backToSignIn: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = #colorLiteral(red: 1, green: 0.2704343498, blue: 0.1398084164, alpha: 1)
+        button.layer.cornerRadius = 10
+        button.setImage(UIImage(systemName: "xmark"), for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
     
     func setupView() {
         addSubview(regLabel)
@@ -92,11 +100,12 @@ class ViewReg: UIView {
         addSubview(passwordRegField)
         addSubview(confirmPasswordRegField)
         addSubview(confirmRegButton)
+        addSubview(backToSignIn)
     }
     func setupConstraints() {
         regLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(65)
+            make.top.equalTo(10)
             make.height.equalTo(30)
         }
         nameField.snp.makeConstraints { make in
@@ -134,6 +143,11 @@ class ViewReg: UIView {
             make.trailing.equalTo(-15)
             make.top.equalTo(confirmPasswordRegField.snp.bottom).offset(15)
             make.height.equalTo(40)
+        }
+        backToSignIn.snp.makeConstraints { make in
+            make.top.equalTo(10)
+            make.height.width.equalTo(30)
+            make.leading.equalTo(15)
         }
     }
     required init?(coder: NSCoder) {

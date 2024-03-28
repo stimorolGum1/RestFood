@@ -39,6 +39,9 @@ class StartScreenViewController: UIViewController {
         setupViews()
         setupConstraints()
         setupAnimate()
+        presenter.openMainScreen() //TODO: сделать комплишен и туда перерадть stopBlink
+        stopBlink()
+        
     }
     func setupViews() {
         view.addSubview(logoImage)
@@ -72,18 +75,18 @@ class StartScreenViewController: UIViewController {
         blink()
     }
     func blink() {
-            UIView.animate(withDuration: 1, delay: 3, options: [.curveEaseInOut, .autoreverse, .repeat],
-                           animations: { [weak self] in
-                self?.statusLabel.alpha = 1.0
-            },
-                           completion: { [weak self] _ in
-                self?.statusLabel.alpha = 0.0
-            })
-        }
-
-        func stopBlink() {
-            self.statusLabel.alpha = 1.0
-        }
+        UIView.animate(withDuration: 1, delay: 3, options: [.curveEaseInOut, .autoreverse, .repeat],
+                       animations: { [weak self] in
+            self?.statusLabel.alpha = 1.0
+        },
+                       completion: { [weak self] _ in
+            self?.statusLabel.alpha = 0.0
+        })
+    }
+    
+    func stopBlink() {
+        self.statusLabel.alpha = 1.0
+    }
 }
 extension StartScreenViewController: StartScreenViewControllerProtocol {
     

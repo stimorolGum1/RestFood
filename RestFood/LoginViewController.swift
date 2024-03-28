@@ -13,11 +13,7 @@ protocol LoginViewControllerProtocol: AnyObject {
 }
 
 class LoginViewController: UIViewController {
-    
     var presenter: LoginPresenterProtocol!
-    var isLoginMove = false
-    var isRegMove = false
-    
     lazy var viewLogin: ViewLogin = {
         let view = ViewLogin()
         view.alpha = 0.0
@@ -28,11 +24,11 @@ class LoginViewController: UIViewController {
         view.layer.shadowRadius = 3
         view.layer.masksToBounds = false
         view.tintColor = .white
-        view.regButton.addTarget(self, action: #selector(moveLoginView), for: .touchUpInside)
+        view.submitButton.addTarget(self, action: #selector(authOk), for: .touchUpInside)
+        view.regButton.addTarget(self, action: #selector(showReg), for: .touchUpInside)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-    
     lazy var viewReg: ViewReg = {
         let view = ViewReg()
         view.alpha = 0.0
@@ -43,24 +39,15 @@ class LoginViewController: UIViewController {
         view.layer.shadowRadius = 3
         view.layer.masksToBounds = false
         view.tintColor = .white
+        view.backToSignIn.addTarget(self, action: #selector(showLogin), for: .touchUpInside)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-    
     override func viewDidLoad() {
         view.backgroundColor = #colorLiteral(red: 0.9803921569, green: 0.9411764706, blue: 0.7921568627, alpha: 1)
         setupViews()
         setupConstraints()
         setupAnimate()
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisappear), name: UIResponder.keyboardWillHideNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
-    }
-    @objc func keyboardWillAppear() {
-        moveLoginView()
-    }
-    
-    @objc func keyboardWillDisappear() {
-        moveLoginView()
     }
     func setupViews() {
         view.addSubview(viewLogin)
@@ -68,68 +55,24 @@ class LoginViewController: UIViewController {
     }
     func setupConstraints() {
         viewLogin.snp.makeConstraints { make in
-            make.centerX.centerY.equalToSuperview()
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(20)
+            make.centerX.equalToSuperview()
             make.height.equalTo(350)
-            make.width.equalTo(390)
-            //make.bottom.equalTo(-300)
+            make.leading.equalTo(15)
+            make.trailing.equalTo(-15)
         }
         viewReg.snp.makeConstraints { make in
-            make.centerX.centerY.equalToSuperview()
-            make.height.equalTo(420)
-            make.width.equalTo(390)
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(20)
+            make.centerX.equalToSuperview()
+            make.height.equalTo(360)
+            make.leading.equalTo(15)
+            make.trailing.equalTo(-15)
         }
     }
     func setupAnimate() {
         UIView.animate(withDuration: 1, animations: { [weak self] in
             self?.viewLogin.alpha = 1
         })
-    }
-    @objc func openReg() { // TODO: подумать как еще можно сделать
-        UIView.animate(withDuration: 1, animations: { [weak self] in
-            self?.viewLogin.alpha = 0
-            self?.viewReg.alpha = 1
-        })
-    }
-    @objc func moveLoginView() {
-        if isLoginMove == false {
-            viewLogin.snp.updateConstraints { make in
-                make.centerY.equalToSuperview().offset(-50)
-                UIView.animate(withDuration: 0.3) {
-                    self.viewLogin.layoutIfNeeded()
-                }
-            }
-            isLoginMove = true
-        }
-        else {
-            viewLogin.snp.updateConstraints { make in
-                make.centerY.equalToSuperview()
-                UIView.animate(withDuration: 0.3) {
-                    self.viewLogin.layoutIfNeeded()
-                }
-            }
-            isLoginMove = false
-        }
-        
-    }
-    @objc func moveRegView() {
-        if isRegMove == false {
-            viewReg.snp.updateConstraints { make in
-                make.centerY.equalToSuperview().offset(-50)
-                UIView.animate(withDuration: 0.3) {
-                    self.viewReg.layoutIfNeeded()
-                }
-            }
-            isRegMove = true
-        }
-        else {
-            viewReg.snp.updateConstraints { make in
-                make.centerY.equalToSuperview()
-                UIView.animate(withDuration: 0.3) {
-                    self.viewReg.layoutIfNeeded()
-                }
-            }
-            isRegMove = false
-        }
     }
     @objc func authOk() {
         presenter.openOnboarding()
@@ -148,7 +91,22 @@ class LoginViewController: UIViewController {
             }
         }
     }
-    
+    @objc func showReg() {
+        UIView.animate(withDuration: 1, animations: { [weak self] in
+            self?.viewLogin.alpha = 0
+        })
+        UIView.animate(withDuration: 1, animations: { [weak self] in
+            self?.viewReg.alpha = 1
+        })
+    }
+    @objc func showLogin() {
+        UIView.animate(withDuration: 1, animations: { [weak self] in
+            self?.viewLogin.alpha = 1
+        })
+        UIView.animate(withDuration: 1, animations: { [weak self] in
+            self?.viewReg.alpha = 0
+        })
+    }
 }
 extension LoginViewController: LoginViewControllerProtocol {
 }

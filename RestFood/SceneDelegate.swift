@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         let router = DefaultRouter(rootTransition: EmptyTransition())
         //let checkScreen = UserDefaults.standard.integer(forKey: "WhichScreenShowNext")
-        let checkScreen = 2
+        let checkScreen = 0
         switch checkScreen {
         case 0:
             window?.rootViewController = router.openLoginAsStartScreen()
@@ -29,9 +29,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         case 1:
             window?.rootViewController = router.StartScreenAsStartScreen()
             window?.makeKeyAndVisible()
-        case 2:
-            window?.rootViewController = router.openTabBarAsStartScreen()
-            window?.makeKeyAndVisible()
+
         default:
             break
         }

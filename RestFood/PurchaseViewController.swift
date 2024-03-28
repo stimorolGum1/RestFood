@@ -28,6 +28,9 @@ class PurchaseViewController: UIViewController {
         label.text = "Address"
         label.font = UIFont.boldSystemFont(ofSize: 20.0)
         label.backgroundColor = .white
+        label.layer.masksToBounds = true
+        label.layer.cornerRadius = 24
+        label.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -41,7 +44,11 @@ class PurchaseViewController: UIViewController {
         let label = UILabel()
         label.text = "Mukhosransk city, Kekovaya st. 23"
         label.font = UIFont.boldSystemFont(ofSize: 20.0)
+        label.textAlignment = .center
         label.backgroundColor = .white
+        label.layer.masksToBounds = true
+        label.layer.cornerRadius = 24
+        label.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -96,7 +103,7 @@ class PurchaseViewController: UIViewController {
     lazy var costLabel: UILabel = {
         let label = UILabel()
         label.text = "Total cost: 10 $"
-        label.font = UIFont.boldSystemFont(ofSize: 25.0)
+        label.font = UIFont.boldSystemFont(ofSize: 20.0)
         return label
     }()
     lazy var confirmOrderButton: UIButton = {
@@ -104,6 +111,7 @@ class PurchaseViewController: UIViewController {
         button.setTitle("Confirm", for: .normal)
         button.backgroundColor = #colorLiteral(red: 1, green: 0.2704343498, blue: 0.1398084164, alpha: 1)
         button.layer.cornerRadius = 10
+        button.addTarget(self, action: #selector(openTransaction), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -208,6 +216,9 @@ class PurchaseViewController: UIViewController {
     }
     @objc func openScanner() {
         presenter.openScanner()
+    }
+    @objc func openTransaction() {
+        presenter.openTransaction()
     }
 }
 extension PurchaseViewController: PurchaseViewControllerProtocol {

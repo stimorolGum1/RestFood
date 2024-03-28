@@ -17,7 +17,7 @@ class OnBoardingView: UIView {
     }()
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addSubview(pageLabel)
+        setupViews()
         setupConstraints()
     }
     required init?(coder: NSCoder) {
@@ -25,6 +25,9 @@ class OnBoardingView: UIView {
     }
     func setPageLabelText(text: String) {
         pageLabel.text = text
+    }
+    func setupViews() {
+        addSubview(pageLabel)
     }
     func setupConstraints() {
         pageLabel.snp.makeConstraints { make in

@@ -1,1 +1,5 @@
 Добавить json в qr и потом парсить его, данные из парса помещать в label где будет указан столик
+протестить на се и исправить косяки
+
+https://stackoverflow.com/questions/24126678/close-ios-keyboard-by-touching-anywhere-using-swift //закрытие клавиатуры
+

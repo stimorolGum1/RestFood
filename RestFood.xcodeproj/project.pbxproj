@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8312E8582BA72F1400F740CF /* TransactionStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8312E8572BA72F1400F740CF /* TransactionStatusViewController.swift */; };
+		8312E85A2BA72F1F00F740CF /* TransactionStatusPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8312E8592BA72F1F00F740CF /* TransactionStatusPresenter.swift */; };
+		8312E85C2BA72F2800F740CF /* TransactionStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8312E85B2BA72F2800F740CF /* TransactionStatusModel.swift */; };
+		8312E85E2BA72FC900F740CF /* TransactionStatusRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8312E85D2BA72FC900F740CF /* TransactionStatusRouter.swift */; };
 		831AA25D2BA4674400043A62 /* PaymentMethodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831AA25C2BA4674400043A62 /* PaymentMethodCell.swift */; };
 		831AA2602BA480CB00043A62 /* ScannerVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831AA25F2BA480CB00043A62 /* ScannerVIewController.swift */; };
 		831AA2622BA480E900043A62 /* ScannerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831AA2612BA480E900043A62 /* ScannerPresenter.swift */; };
@@ -74,6 +78,10 @@
 /* Begin PBXFileReference section */
 		3410826907CAC30FC6503D89 /* Pods_RestFood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestFood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		535F739F037DA879095B91F3 /* Pods-RestFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestFood.release.xcconfig"; path = "Target Support Files/Pods-RestFood/Pods-RestFood.release.xcconfig"; sourceTree = "<group>"; };
+		8312E8572BA72F1400F740CF /* TransactionStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionStatusViewController.swift; sourceTree = "<group>"; };
+		8312E8592BA72F1F00F740CF /* TransactionStatusPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionStatusPresenter.swift; sourceTree = "<group>"; };
+		8312E85B2BA72F2800F740CF /* TransactionStatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionStatusModel.swift; sourceTree = "<group>"; };
+		8312E85D2BA72FC900F740CF /* TransactionStatusRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionStatusRouter.swift; sourceTree = "<group>"; };
 		831AA25C2BA4674400043A62 /* PaymentMethodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodCell.swift; sourceTree = "<group>"; };
 		831AA25F2BA480CB00043A62 /* ScannerVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerVIewController.swift; sourceTree = "<group>"; };
 		831AA2612BA480E900043A62 /* ScannerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerPresenter.swift; sourceTree = "<group>"; };
@@ -161,6 +169,17 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		8312E8562BA72CBB00F740CF /* TransactionStatus */ = {
+			isa = PBXGroup;
+			children = (
+				8312E8572BA72F1400F740CF /* TransactionStatusViewController.swift */,
+				8312E8592BA72F1F00F740CF /* TransactionStatusPresenter.swift */,
+				8312E85B2BA72F2800F740CF /* TransactionStatusModel.swift */,
+				8312E85D2BA72FC900F740CF /* TransactionStatusRouter.swift */,
+			);
+			name = TransactionStatus;
+			sourceTree = "<group>";
+		};
 		831AA25B2BA466F000043A62 /* PaymentMethodCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,13 +246,6 @@
 				834F6E7B2B8787AD00EACF43 /* ProfileModel.swift */,
 			);
 			name = Profile;
-			sourceTree = "<group>";
-		};
-		83566CFF2BA32B120089E461 /* PurchaseStatusView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = PurchaseStatusView;
 			sourceTree = "<group>";
 		};
 		83566D002BA32B320089E461 /* LocationManager */ = {
@@ -304,7 +316,6 @@
 			isa = PBXGroup;
 			children = (
 				831AA25B2BA466F000043A62 /* PaymentMethodCell */,
-				83566CFF2BA32B120089E461 /* PurchaseStatusView */,
 				839ECC832B9D8B0E00FA504C /* PurchaseViewController.swift */,
 				839ECC852B9D8B1B00FA504C /* PurchasePresenter.swift */,
 				839ECC872B9D8B2A00FA504C /* PurchaseModel.swift */,
@@ -363,7 +374,7 @@
 			name = FoodDetail;
 			sourceTree = "<group>";
 		};
-		83BF4FC92B67C08B00546F04 /* Login */ = {
+		83BF4FC92B67C08B00546F04 /* Sign-in-up */ = {
 			isa = PBXGroup;
 			children = (
 				839ECC892B9D8B6500FA504C /* LoginView */,
@@ -372,7 +383,7 @@
 				83EEA8B92B68E29C00091203 /* LoginModel.swift */,
 				83EEA8D22B68E30000091203 /* LoginRouter.swift */,
 			);
-			name = Login;
+			name = "Sign-in-up";
 			sourceTree = "<group>";
 		};
 		83D0C3ED2B6778F9005D9DC9 = {
@@ -397,23 +408,24 @@
 			isa = PBXGroup;
 			children = (
 				833098D62BA713B2004E1F52 /* Marks */,
+				83853F412B97664200E4E678 /* StartScreen */,
+				831F063E2B6ACA470003D6A6 /* MainScreen */,
+				834F6E702B877B0B00EACF43 /* TabBar */,
 				83566D002BA32B320089E461 /* LocationManager */,
 				839C4E762B9CCAAB001FA1F0 /* CacheManager */,
 				83566D012BA32B410089E461 /* NetworkManager */,
 				839C4E6D2B9CBDC2001FA1F0 /* Enums */,
 				839C4E702B9CBDE0001FA1F0 /* Extensions */,
 				831AA25E2BA47C0F00043A62 /* Scanner */,
+				8312E8562BA72CBB00F740CF /* TransactionStatus */,
 				839C4E6C2B9CBDA8001FA1F0 /* Purchase */,
 				8341BCB02B99F71300349090 /* CustomUIElements */,
 				83853F3F2B9764E500E4E678 /* OnBoarding */,
-				83853F412B97664200E4E678 /* StartScreen */,
 				83853F402B97663800E4E678 /* Order */,
 				834F6E762B87869500EACF43 /* Profile */,
-				834F6E702B877B0B00EACF43 /* TabBar */,
 				83B607B42B6ECF9700BBDF35 /* FoodDetail */,
-				831F063E2B6ACA470003D6A6 /* MainScreen */,
 				83EEA8BB2B68E2E600091203 /* Routes */,
-				83BF4FC92B67C08B00546F04 /* Login */,
+				83BF4FC92B67C08B00546F04 /* Sign-in-up */,
 				83D0C3F92B6778F9005D9DC9 /* AppDelegate.swift */,
 				83D0C3FB2B6778F9005D9DC9 /* SceneDelegate.swift */,
 				83D0C4022B6778FA005D9DC9 /* Assets.xcassets */,
@@ -600,6 +612,7 @@
 				831F06442B6ACABF0003D6A6 /* MainScreenModel.swift in Sources */,
 				832C86062B9E867C006F219F /* PurchaseRouter.swift in Sources */,
 				83EEA8CF2B68E2E600091203 /* NewAnimatedTransition.swift in Sources */,
+				8312E8582BA72F1400F740CF /* TransactionStatusViewController.swift in Sources */,
 				839ECC842B9D8B0E00FA504C /* PurchaseViewController.swift in Sources */,
 				831F06462B6AECA20003D6A6 /* MainRouter.swift in Sources */,
 				83EEA8D32B68E30000091203 /* LoginRouter.swift in Sources */,
@@ -609,7 +622,9 @@
 				83EEA8CD2B68E2E600091203 /* FadeAnimatedTransitioning.swift in Sources */,
 				831AA2622BA480E900043A62 /* ScannerPresenter.swift in Sources */,
 				834F6E7C2B8787AD00EACF43 /* ProfileModel.swift in Sources */,
+				8312E85C2BA72F2800F740CF /* TransactionStatusModel.swift in Sources */,
 				839C4E722B9CBFF9001FA1F0 /* OnboardingRouter.swift in Sources */,
+				8312E85E2BA72FC900F740CF /* TransactionStatusRouter.swift in Sources */,
 				839ECC8B2B9D8B8400FA504C /* ViewLogin.swift in Sources */,
 				832A692C2B98AE2E0071B6FD /* OnBoardingPresenter.swift in Sources */,
 				836DF5062B8B7B0C0024A319 /* TableViewCell.swift in Sources */,
@@ -636,6 +651,7 @@
 				83EEA8CB2B68E2E600091203 /* PushTransition.swift in Sources */,
 				839ECC8D2B9D8D6D00FA504C /* viewReg.swift in Sources */,
 				832A692A2B98AD800071B6FD /* OnBoardingViewController.swift in Sources */,
+				8312E85A2BA72F1F00F740CF /* TransactionStatusPresenter.swift in Sources */,
 				83D0C3FC2B6778F9005D9DC9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -784,10 +800,12 @@
 				DEVELOPMENT_TEAM = 56NB3JKLU5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RestFood/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow using cam for scan qr";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -796,9 +814,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = danil.RestFood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -813,10 +833,12 @@
 				DEVELOPMENT_TEAM = 56NB3JKLU5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RestFood/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Allow using cam for scan qr";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -825,9 +847,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = danil.RestFood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
