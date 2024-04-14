@@ -27,7 +27,6 @@ class CollectionViewCell: UICollectionViewCell {
         setupViews()
         setupConstraints()
         self.backgroundColor = .gray
-        self.layer.cornerRadius = 5
         self.layer.shadowRadius = 10
         self.layer.shadowOpacity = 0.3
         self.layer.shadowOffset = CGSize(width: 4, height: 4)

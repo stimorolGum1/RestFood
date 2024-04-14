@@ -1,0 +1,13 @@
+/* 
+  LocalizationRusEng.strings
+  RestFood
+
+  Created by Danil on 14.04.2024.
+  
+*/
+"loginView_welcomeLabel" = "Welcome to RestFood";
+"loginView_loginField" = "Login";
+"loginView_passField" = "Password";
+"loginView_submitButton" = "Login";
+"loginView_regButton" = "Sign up";
+

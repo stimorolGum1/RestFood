@@ -24,12 +24,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let checkScreen = 0
         switch checkScreen {
         case 0:
-            window?.rootViewController = router.openSignInUpAsStartScreen()
+            window?.rootViewController = router.openSignInAsStartScreen()
             window?.makeKeyAndVisible()
         case 1:
             window?.rootViewController = router.StartScreenAsStartScreen()
             window?.makeKeyAndVisible()
-
+        case 2:
+            window?.rootViewController = router.openTabBarAsStartScreen()
+            window?.makeKeyAndVisible()
         default:
             break
         }

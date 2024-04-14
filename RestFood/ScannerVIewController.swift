@@ -15,9 +15,19 @@ class ScannerViewController: UIViewController {
     var presenter: ScannerPresenterProtocol!
     let captureSession = AVCaptureSession()
     var videoPreviewLayer: AVCaptureVideoPreviewLayer!
+    lazy var backButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = #colorLiteral(red: 1, green: 0.2704343498, blue: 0.1398084164, alpha: 1)
+        button.layer.cornerRadius = 15
+        button.setImage(UIImage(systemName: "xmark"), for: .normal)
+        button.addTarget(self, action: #selector(close), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
     lazy var header: UIView = {
         let view = UIView()
         view.backgroundColor = .black
+        view.alpha = 0.5
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -38,6 +48,8 @@ class ScannerViewController: UIViewController {
     }()
     override func viewDidLoad() {
         view.backgroundColor = .white
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
         setupViews()
         setupConstraints()
         setupCamera()
@@ -46,6 +58,7 @@ class ScannerViewController: UIViewController {
     func setupViews() {
         view.addSubview(header)
         header.addSubview(headerLabel)
+        header.addSubview(backButton)
         view.addSubview(scanView)
     }
     func setupCamera() {
@@ -84,9 +97,15 @@ class ScannerViewController: UIViewController {
         }
     }
     func setupConstraints() {
+        backButton.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(20)
+            make.height.width.equalTo(25)
+            make.trailing.equalTo(-10)
+        }
         header.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-            make.leading.trailing.equalToSuperview()
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
             make.height.equalTo(100)
         }
         headerLabel.snp.makeConstraints { make in
@@ -98,8 +117,12 @@ class ScannerViewController: UIViewController {
             make.top.equalTo(header.snp.bottom)
             make.leading.trailing.bottom.equalToSuperview()
         }
-        
-        
+    }
+    @objc func close() {
+        presenter.close()
+    }
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
 extension ScannerViewController: ScannerViewControllerProtocol {

@@ -9,12 +9,14 @@ import Foundation
 protocol PurchasePresenterProtocol {
     func openScanner()
     func openTransaction()
+    func openPaymentMethod()
+    func close()
 }
 class PurchasePresenter {
     weak var view: PurchaseViewControllerProtocol?
     var model: PurchaseModel!
     let router: Routes
-    typealias Routes = Closable & ScannerRoute & TransactionStatusRoute
+    typealias Routes = Closable & ScannerRoute & TransactionStatusRoute & PaymentMethodRoute
     required init(router: Routes, view: PurchaseViewControllerProtocol?, model: PurchaseModel) {
         self.router = router
         self.view = view
@@ -23,6 +25,14 @@ class PurchasePresenter {
     
 }
 extension PurchasePresenter: PurchasePresenterProtocol {
+    func openPaymentMethod() {
+        router.openPaymentMethod()
+    }
+    
+    func close() {
+        router.close()
+    }
+    
     func openTransaction() {
         router.openTransactionStatus()
     }
@@ -30,6 +40,8 @@ extension PurchasePresenter: PurchasePresenterProtocol {
     func openScanner() {
         router.openScanner()
     }
+    
+    
     
     
 }

@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class ViewLogin: UIView {
+class LoginView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         alpha = 0.0
@@ -28,7 +28,7 @@ class ViewLogin: UIView {
         label.text = "Welcome to RestFood"
         label.alpha = 0.0
         label.textAlignment = .center
-        label.font = label.font.withSize(25)
+        label.font.withSize(25)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -83,7 +83,7 @@ class ViewLogin: UIView {
     func setupConstraints() {
         welcomeLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(70)
+            make.top.equalTo(30)
             make.height.equalTo(25)
         }
         loginField.snp.makeConstraints { make in

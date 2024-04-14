@@ -36,12 +36,13 @@ class ProfileViewController: UIViewController {
         button.layer.shadowRadius = 3
         button.layer.masksToBounds = false
         button.tintColor = .white
+        button.addTarget(self, action: #selector(openEditUser), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
-    lazy var faqButton: UIButton = {
+    lazy var AboutAppButton: UIButton = {
         let button = UIButton()
-        button.setTitle("FAQ", for: .normal)
+        button.setTitle("About App", for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.backgroundColor = .white
         button.layer.cornerRadius = 24
@@ -50,12 +51,13 @@ class ProfileViewController: UIViewController {
         button.layer.shadowRadius = 3
         button.layer.masksToBounds = false
         button.tintColor = .white
+        button.addTarget(self, action: #selector(logOutFromAccount), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
-    lazy var contactButton: UIButton = {
+    lazy var logOutFromAccountButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Contact us", for: .normal)
+        button.setTitle("log out from account", for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.backgroundColor = .white
         button.layer.cornerRadius = 24
@@ -64,6 +66,7 @@ class ProfileViewController: UIViewController {
         button.layer.shadowRadius = 3
         button.layer.masksToBounds = false
         button.tintColor = .white
+        button.addTarget(self, action: #selector(logOutFromAccount), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -78,8 +81,8 @@ class ProfileViewController: UIViewController {
         view.addSubview(avatarRect)
         view.addSubview(nameLabel)
         view.addSubview(editUserButton)
-        view.addSubview(faqButton)
-        view.addSubview(contactButton)
+        view.addSubview(AboutAppButton)
+        view.addSubview(logOutFromAccountButton)
     }
     func setupConstraints() {
         setupAvatarRect()
@@ -96,14 +99,14 @@ class ProfileViewController: UIViewController {
             make.height.equalTo(48)
             
         }
-        faqButton.snp.makeConstraints { make in
+        AboutAppButton.snp.makeConstraints { make in
             make.top.equalTo(editUserButton.snp.bottom).offset(15)
             make.centerX.equalToSuperview()
             make.width.equalTo(301)
             make.height.equalTo(48)
         }
-        contactButton.snp.makeConstraints { make in
-            make.top.equalTo(faqButton.snp.bottom).offset(15)
+        logOutFromAccountButton.snp.makeConstraints { make in
+            make.top.equalTo(AboutAppButton.snp.bottom).offset(15)
             make.centerX.equalToSuperview()
             make.width.equalTo(301)
             make.height.equalTo(48)
@@ -124,6 +127,26 @@ class ProfileViewController: UIViewController {
         avatarRect.layer.borderWidth = 10.0
         avatarRect.layer.borderColor = UIColor.white.cgColor
     }
+    @objc func logOutFromAccount() {
+        let alert = UIAlertController(title: "Are you want logout", message: "All your stored data include cards will distroyed", preferredStyle: .alert)
+         
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { [weak self] _  in
+            self?.presenter.openLogin()
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+         
+        self.present(alert, animated: true)
+    }
+    @objc func exit() {
+        presenter.openLogin()
+    }
+    @objc func openEditUser() {
+        presenter.openEditUser()
+    }
+    @objc func close() {
+        presenter.close()
+    }
+    
 }
 extension ProfileViewController: ProfileViewControllerProtocol {
     

@@ -107,9 +107,16 @@ extension MainScreenViewController: UICollectionViewDelegate, UICollectionViewDa
         return CGSize(width: 100, height: 50)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //var cell = collectionView.cellForItem(at: indexPath) as! CollectionViewCell
         let selectedSection = indexPath.item
+        if let cell = collectionView.cellForItem(at: indexPath) as? CollectionViewCell {
+            cell.contentView.backgroundColor = .orange
+            }
         tableView.scrollToRow(at: IndexPath(row: 0, section: selectedSection), at: .top, animated: true)
+    }
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) as? CollectionViewCell {
+            cell.contentView.backgroundColor = .white
+            }
     }
 }
 extension MainScreenViewController: UITableViewDelegate, UITableViewDataSource {

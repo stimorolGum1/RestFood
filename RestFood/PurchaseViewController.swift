@@ -15,13 +15,29 @@ class PurchaseViewController: UIViewController {
     var presenter: PurchasePresenterProtocol!
     let paymentCell = "paymentCell"
     let cards = ["KekCard", "LolCard", "+"]
-    //TODO: добавить кнопку назад
+    lazy var backButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = #colorLiteral(red: 1, green: 0.2704343498, blue: 0.1398084164, alpha: 1)
+        button.layer.cornerRadius = 15
+        button.setImage(UIImage(systemName: "xmark"), for: .normal)
+        button.addTarget(self, action: #selector(close), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
     lazy var header: UILabel = {
         let label = UILabel()
         label.text = "Purchase"
         label.font = UIFont.boldSystemFont(ofSize: 25.0)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
+    }()
+    lazy var scrollView: UIScrollView = {
+        let scroll = UIScrollView()
+        scroll.backgroundColor = #colorLiteral(red: 0.9803921569, green: 0.9411764706, blue: 0.7921568627, alpha: 1)
+        scroll.isScrollEnabled = true
+        scroll.showsVerticalScrollIndicator = true
+        scroll.translatesAutoresizingMaskIntoConstraints = false
+        return scroll
     }()
     lazy var addressLabel: UILabel = {
         let label = UILabel()
@@ -110,7 +126,7 @@ class PurchaseViewController: UIViewController {
         let button = UIButton()
         button.setTitle("Confirm", for: .normal)
         button.backgroundColor = #colorLiteral(red: 1, green: 0.2704343498, blue: 0.1398084164, alpha: 1)
-        button.layer.cornerRadius = 10
+        button.layer.cornerRadius = 5
         button.addTarget(self, action: #selector(openTransaction), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -127,61 +143,79 @@ class PurchaseViewController: UIViewController {
     
     func setupViews() { //TODO: добавить какой столик выбран
         view.addSubview(header)
-        view.addSubview(addressLabel)
-        view.addSubview(cafeMap)
-        view.addSubview(streetLabel)
-        view.addSubview(scanQrLabelHeader)
-        view.addSubview(scanQrLabel)
-        view.addSubview(scanButton)
-        view.addSubview(PaymentMethodLabel)
-        view.addSubview(collectionOfPayment)
+        view.addSubview(backButton)
+        view.addSubview(scrollView)
+        scrollView.addSubview(addressLabel)
+        scrollView.addSubview(cafeMap)
+        scrollView.addSubview(streetLabel)
+        scrollView.addSubview(scanQrLabelHeader)
+        scrollView.addSubview(scanQrLabel)
+        scrollView.addSubview(scanButton)
+        scrollView.addSubview(PaymentMethodLabel)
+        scrollView.addSubview(collectionOfPayment)
         view.addSubview(confirmView)
         confirmView.addSubview(costLabel)
         confirmView.addSubview(confirmOrderButton)
     }
     
     func setupConstraints() {
+        backButton.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(20)
+            make.height.width.equalTo(25)
+            make.trailing.equalTo(-10)
+        }
         header.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide).offset(20)
             make.leading.equalTo(10)
             make.height.equalTo(25)
-            make.trailing.equalTo(-10)
+            make.trailing.equalTo(-35)
+        }
+        scrollView.snp.makeConstraints { make in
+            make.top.equalTo(header.snp.bottom).offset(15)
+            make.width.equalToSuperview()
+            make.bottom.equalTo(confirmView.snp.top)
         }
         addressLabel.snp.makeConstraints { make in
-            make.top.equalTo(header.snp.bottom).offset(15)
+            make.top.equalTo(15)
             make.leading.equalTo(10)
             make.height.equalTo(40)
             make.trailing.equalTo(-10)
+            make.centerX.equalToSuperview()
         }
         cafeMap.snp.makeConstraints { make in
             make.top.equalTo(addressLabel.snp.bottom).offset(0)
             make.leading.equalTo(10)
             make.height.equalTo(250)
             make.trailing.equalTo(-10)
+            make.centerX.equalToSuperview()
         }
         streetLabel.snp.makeConstraints { make in
             make.top.equalTo(cafeMap.snp.bottom).offset(0)
             make.leading.equalTo(10)
             make.height.equalTo(40)
             make.trailing.equalTo(-10)
+            make.centerX.equalToSuperview()
         }
         scanQrLabelHeader.snp.makeConstraints { make in
             make.top.equalTo(streetLabel.snp.bottom).offset(15)
             make.leading.equalTo(10)
             make.height.equalTo(25)
             make.trailing.equalTo(-10)
+            make.centerX.equalToSuperview()
         }
         scanQrLabel.snp.makeConstraints { make in
             make.top.equalTo(scanQrLabelHeader.snp.bottom).offset(5)
             make.leading.equalTo(10)
             make.height.equalTo(15)
             make.trailing.equalTo(-10)
+            make.centerX.equalToSuperview()
         }
         scanButton.snp.makeConstraints { make in
             make.top.equalTo(scanQrLabel.snp.bottom).offset(15)
             make.leading.equalTo(10)
             make.height.equalTo(40)
             make.trailing.equalTo(-10)
+            make.centerX.equalToSuperview()
         }
         PaymentMethodLabel.snp.makeConstraints { make in
             make.top.equalTo(scanButton.snp.bottom).offset(15)
@@ -194,11 +228,12 @@ class PurchaseViewController: UIViewController {
             make.leading.equalToSuperview()
             make.height.equalTo(90)
             make.trailing.equalToSuperview()
+            make.bottom.equalToSuperview()
         }
         confirmView.snp.makeConstraints { make in
             make.bottom.equalToSuperview()
             make.leading.equalTo(0)
-            make.height.equalTo(100)
+            make.height.equalTo(70)
             make.trailing.equalTo(0)
         }
         costLabel.snp.makeConstraints { make in
@@ -219,6 +254,9 @@ class PurchaseViewController: UIViewController {
     }
     @objc func openTransaction() {
         presenter.openTransaction()
+    }
+    @objc func close() {
+        presenter.close()
     }
 }
 extension PurchaseViewController: PurchaseViewControllerProtocol {
@@ -242,9 +280,17 @@ extension PurchaseViewController: UICollectionViewDelegate, UICollectionViewData
         return CGSize(width: 100, height: 50)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("select payment method \(indexPath.row)")
+        if let cell = collectionView.cellForItem(at: indexPath) as? PaymentMethodCell, indexPath.row != cards.count - 1 {
+            cell.contentView.backgroundColor = .orange
+        }
+        if indexPath.row == cards.count - 1 {
+            presenter.openPaymentMethod()
+        }
     }
-    
-    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) as? PaymentMethodCell {
+            cell.contentView.backgroundColor = .white
+            }
+    }
 
 }

@@ -13,7 +13,6 @@ protocol OrderViewControllerProtocol: AnyObject {
 class OrderViewController: UIViewController {
     var presenter: OrderPresenterProtocol!
     let tableCell = "OrderTableCell"
-    
     lazy var header: UILabel = {
         let label = UILabel()
         label.text = "Orders"
@@ -61,22 +60,22 @@ class OrderViewController: UIViewController {
         view.addSubview(purchaseButton)
     }
     func setupConstraints() {
+        
         header.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide).offset(20)
             make.leading.equalTo(10)
             make.height.equalTo(25)
-            make.trailing.equalTo(-10)
+            make.trailing.equalTo(-35)
         }
         tableView.snp.makeConstraints { make in
             make.leading.equalTo(15)
             make.trailing.equalTo(-15)
-            make.top.equalTo(header.snp.bottom).offset(30)
-            make.bottom.equalTo(purchaseButton.snp.top).offset(-15)
+            make.top.equalTo(header.snp.bottom).offset(10)
+            make.bottom.equalTo(purchaseButton.snp.top).offset(-10)
         }
         purchaseButton.snp.makeConstraints { make in
             make.leading.equalTo(15)
             make.trailing.equalTo(-15)
-            make.top.equalTo(tableView.snp.bottom).offset(15)
             make.height.equalTo(40)
             make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-20)
         }

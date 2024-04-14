@@ -7,7 +7,7 @@
 
 import Foundation
 protocol ScannerPresenterProtocol {
-    
+    func close()
 }
 class ScannerPresenter {
     weak var view: ScannerViewControllerProtocol?
@@ -22,5 +22,9 @@ class ScannerPresenter {
     
 }
 extension ScannerPresenter: ScannerPresenterProtocol {
+    func close() {
+        router.close()
+    }
+    
     
 }
