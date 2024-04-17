@@ -14,11 +14,10 @@ protocol SignInViewControllerProtocol: AnyObject {
 
 class SignInViewController: UIViewController {
     var presenter: SignInPresenterProtocol!
-    let screenSize = UIScreen.main.bounds.size
-    lazy var viewLogin: LoginView = {
-        let view = LoginView()
+    lazy var signInView: SignInView = {
+        let view = SignInView()
         view.submitButton.addTarget(self, action: #selector(authOk), for: .touchUpInside)
-        view.regButton.addTarget(self, action: #selector(showReg), for: .touchUpInside)
+        view.regButton.addTarget(self, action: #selector(showSignUp), for: .touchUpInside)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -34,10 +33,10 @@ class SignInViewController: UIViewController {
     
     }
     func setupViews() {
-        view.addSubview(viewLogin)
+        view.addSubview(signInView)
     }
     func setupConstraints() {
-        viewLogin.snp.makeConstraints { make in
+        signInView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview()
             make.height.equalTo(300)
@@ -48,7 +47,7 @@ class SignInViewController: UIViewController {
     @objc func keyboardWillShow(notification: Notification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             let centerY = UIScreen.main.bounds.size.width - keyboardSize.height / 2
-                        viewLogin.snp.updateConstraints { make in
+                        signInView.snp.updateConstraints { make in
                             make.centerY.equalToSuperview().offset(-centerY / 2)
                         }
                         UIView.animate(withDuration: 0.3) {
@@ -57,7 +56,7 @@ class SignInViewController: UIViewController {
         }
     }
     @objc func keyboardWillHide(notification: Notification) {
-        viewLogin.snp.updateConstraints { make in
+        signInView.snp.updateConstraints { make in
                     make.centerY.equalToSuperview()
                 }
                 UIView.animate(withDuration: 0.3) {
@@ -65,34 +64,34 @@ class SignInViewController: UIViewController {
                 }
     }
     @objc func dismissKeyboard() {
-        viewLogin.endEditing(true)
+        signInView.endEditing(true)
     }
     
     func setupAnimate() {
         UIView.animate(withDuration: 1, animations: { [weak self] in
-            self?.viewLogin.alpha = 1
+            self?.signInView.alpha = 1
         })
     }
 
     @objc func authOk() {
-        
-        
+        presenter.auth(login: signInView.loginField.text ?? "", pass: signInView.passField.text ?? "") { [weak self] error in
+        }
     }
     @objc func wrongAuth() {
-        let startX = viewLogin.frame.origin.x
+        let startX = signInView.frame.origin.x
         UIView.animate(withDuration: 0.1, animations: { [weak self] in
-            self?.viewLogin.frame.origin.x = startX - 8
+            self?.signInView.frame.origin.x = startX - 8
         }) { _ in
             UIView.animate(withDuration: 0.1, animations: { [weak self] in
-                self?.viewLogin.frame.origin.x = startX + 8
+                self?.signInView.frame.origin.x = startX + 8
             }) { _ in
                 UIView.animate(withDuration: 0.1, animations: { [weak self] in
-                    self?.viewLogin.frame.origin.x = startX
+                    self?.signInView.frame.origin.x = startX
                 })
             }
         }
     }
-    @objc func showReg() {
+    @objc func showSignUp() {
         presenter.openSignUp()
     }
 }

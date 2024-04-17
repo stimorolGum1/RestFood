@@ -26,7 +26,6 @@
 		832A692C2B98AE2E0071B6FD /* OnBoardingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832A692B2B98AE2E0071B6FD /* OnBoardingPresenter.swift */; };
 		832A692E2B98AE5D0071B6FD /* OnBoardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832A692D2B98AE5D0071B6FD /* OnBoardingModel.swift */; };
 		832C86062B9E867C006F219F /* PurchaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832C86052B9E867C006F219F /* PurchaseRouter.swift */; };
-		833098D72BA713B2004E1F52 /* Marks in Resources */ = {isa = PBXBuildFile; fileRef = 833098D62BA713B2004E1F52 /* Marks */; };
 		8341BCA72B992DED00349090 /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8341BCA62B992DED00349090 /* StartScreenViewController.swift */; };
 		8341BCA92B992E0000349090 /* StartScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8341BCA82B992E0000349090 /* StartScreenPresenter.swift */; };
 		8341BCAB2B992E1000349090 /* StartScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8341BCAA2B992E1000349090 /* StartScreenModel.swift */; };
@@ -49,8 +48,8 @@
 		839ECC842B9D8B0E00FA504C /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839ECC832B9D8B0E00FA504C /* PurchaseViewController.swift */; };
 		839ECC862B9D8B1B00FA504C /* PurchasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839ECC852B9D8B1B00FA504C /* PurchasePresenter.swift */; };
 		839ECC882B9D8B2A00FA504C /* PurchaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839ECC872B9D8B2A00FA504C /* PurchaseModel.swift */; };
-		839ECC8B2B9D8B8400FA504C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839ECC8A2B9D8B8400FA504C /* LoginView.swift */; };
-		839ECC8D2B9D8D6D00FA504C /* viewReg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839ECC8C2B9D8D6D00FA504C /* viewReg.swift */; };
+		839ECC8B2B9D8B8400FA504C /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839ECC8A2B9D8B8400FA504C /* SignInView.swift */; };
+		839ECC8D2B9D8D6D00FA504C /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839ECC8C2B9D8D6D00FA504C /* SignUpView.swift */; };
 		83A845352BC1885000664267 /* EditUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A845342BC1885000664267 /* EditUserView.swift */; };
 		83AB17E02BC4BB93002BF1CB /* AboutAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AB17DF2BC4BB93002BF1CB /* AboutAppViewController.swift */; };
 		83AB17E22BC4BBB0002BF1CB /* AboutAppPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AB17E12BC4BBB0002BF1CB /* AboutAppPresenter.swift */; };
@@ -116,7 +115,6 @@
 		832A692B2B98AE2E0071B6FD /* OnBoardingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPresenter.swift; sourceTree = "<group>"; };
 		832A692D2B98AE5D0071B6FD /* OnBoardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingModel.swift; sourceTree = "<group>"; };
 		832C86052B9E867C006F219F /* PurchaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseRouter.swift; sourceTree = "<group>"; };
-		833098D62BA713B2004E1F52 /* Marks */ = {isa = PBXFileReference; lastKnownFileType = text; path = Marks; sourceTree = "<group>"; };
 		8341BCA62B992DED00349090 /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 		8341BCA82B992E0000349090 /* StartScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenPresenter.swift; sourceTree = "<group>"; };
 		8341BCAA2B992E1000349090 /* StartScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenModel.swift; sourceTree = "<group>"; };
@@ -139,8 +137,8 @@
 		839ECC832B9D8B0E00FA504C /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
 		839ECC852B9D8B1B00FA504C /* PurchasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasePresenter.swift; sourceTree = "<group>"; };
 		839ECC872B9D8B2A00FA504C /* PurchaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseModel.swift; sourceTree = "<group>"; };
-		839ECC8A2B9D8B8400FA504C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		839ECC8C2B9D8D6D00FA504C /* viewReg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewReg.swift; sourceTree = "<group>"; };
+		839ECC8A2B9D8B8400FA504C /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		839ECC8C2B9D8D6D00FA504C /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		83A845342BC1885000664267 /* EditUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserView.swift; sourceTree = "<group>"; };
 		83AB17DF2BC4BB93002BF1CB /* AboutAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppViewController.swift; sourceTree = "<group>"; };
 		83AB17E12BC4BBB0002BF1CB /* AboutAppPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppPresenter.swift; sourceTree = "<group>"; };
@@ -474,7 +472,7 @@
 		83BF4FC92B67C08B00546F04 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
-				839ECC8A2B9D8B8400FA504C /* LoginView.swift */,
+				839ECC8A2B9D8B8400FA504C /* SignInView.swift */,
 				83EEA8B72B68E26100091203 /* SignInPresenter.swift */,
 				83EEA8B92B68E29C00091203 /* SignInModel.swift */,
 				83EEA8D22B68E30000091203 /* SignInRouter.swift */,
@@ -521,7 +519,6 @@
 				83AB17DE2BC4B578002BF1CB /* KeychainManager */,
 				83AB17DC2BC4B558002BF1CB /* AboutApp */,
 				83771B0C2BBC114F00E8B825 /* PaymentMethod */,
-				833098D62BA713B2004E1F52 /* Marks */,
 				83566D002BA32B320089E461 /* LocationManager */,
 				839C4E762B9CCAAB001FA1F0 /* CacheManager */,
 				83566D012BA32B410089E461 /* NetworkManager */,
@@ -539,7 +536,7 @@
 		83D36FFE2BCAB98F00DDF36F /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				839ECC8C2B9D8D6D00FA504C /* viewReg.swift */,
+				839ECC8C2B9D8D6D00FA504C /* SignUpView.swift */,
 				83D36FFF2BCAB9DD00DDF36F /* SignUpViewController.swift */,
 				83D370012BCAB9E900DDF36F /* SignUpPresenter.swift */,
 				83D370032BCAB9F400DDF36F /* SignUpModel.swift */,
@@ -636,7 +633,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					83D0C3F52B6778F9005D9DC9 = {
 						CreatedOnToolsVersion = 15.0;
@@ -667,7 +664,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				833098D72BA713B2004E1F52 /* Marks in Resources */,
 				83D370152BCAD39200DDF36F /* LocalizationRusEng.strings in Resources */,
 				83D0C4032B6778FA005D9DC9 /* Assets.xcassets in Resources */,
 			);
@@ -765,7 +761,7 @@
 				83AB17EE2BC55C7A002BF1CB /* AboutAppRouter.swift in Sources */,
 				839C4E722B9CBFF9001FA1F0 /* OnboardingRouter.swift in Sources */,
 				8312E85E2BA72FC900F740CF /* TransactionStatusRouter.swift in Sources */,
-				839ECC8B2B9D8B8400FA504C /* LoginView.swift in Sources */,
+				839ECC8B2B9D8B8400FA504C /* SignInView.swift in Sources */,
 				832A692C2B98AE2E0071B6FD /* OnBoardingPresenter.swift in Sources */,
 				836DF5062B8B7B0C0024A319 /* TableViewCell.swift in Sources */,
 				83AB95162B9C921500573A3E /* OrderModel.swift in Sources */,
@@ -795,7 +791,7 @@
 				83C56E482B703D4100A3850C /* FoodDetailPresenter.swift in Sources */,
 				83EEA8CB2B68E2E600091203 /* PushTransition.swift in Sources */,
 				837C16BA2BBDA7D5004CD780 /* PaymentMethodPresenter.swift in Sources */,
-				839ECC8D2B9D8D6D00FA504C /* viewReg.swift in Sources */,
+				839ECC8D2B9D8D6D00FA504C /* SignUpView.swift in Sources */,
 				83D370022BCAB9E900DDF36F /* SignUpPresenter.swift in Sources */,
 				83AB17E42BC4BBB9002BF1CB /* AboutAppModel.swift in Sources */,
 				832A692A2B98AD800071B6FD /* OnBoardingViewController.swift in Sources */,
@@ -826,6 +822,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -889,6 +886,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -957,13 +955,14 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = danil.RestFood;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danil.restFoodiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -990,13 +989,14 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = danil.RestFood;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danil.restFoodiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

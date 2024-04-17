@@ -1,5 +1,5 @@
 //
-//  RegView.swift
+//  SingUpView.swift
 //  RestFood
 //
 //  Created by Danil on 10.03.2024.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegView: UIView {
+class SingUpView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,9 +30,9 @@ class RegView: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
-    lazy var regLabel: UILabel = {
+    lazy var signUpLabel: UILabel = {
         let label = UILabel()
-        label.text = "Sign up to RestFood"
+        label.text = "Sign up"
         label.textAlignment = .center
         label.font.withSize(25)
         label.textAlignment = .center
@@ -59,7 +59,7 @@ class RegView: UIView {
         field.translatesAutoresizingMaskIntoConstraints = false
         return field
     }()
-    lazy var loginRegField: CustomTextField = {
+    lazy var loginSignUpField: CustomTextField = {
         let field = CustomTextField()
         field.placeholder = "Login"
         field.spellCheckingType = .no
@@ -69,7 +69,7 @@ class RegView: UIView {
         field.translatesAutoresizingMaskIntoConstraints = false
         return field
     }()
-    lazy var passwordRegField: CustomTextField = {
+    lazy var passwordSignUpField: CustomTextField = {
         let field = CustomTextField()
         field.placeholder = "Password"
         field.spellCheckingType = .no
@@ -80,7 +80,7 @@ class RegView: UIView {
         field.translatesAutoresizingMaskIntoConstraints = false
         return field
     }()
-    lazy var confirmPasswordRegField: CustomTextField = {
+    lazy var confirmPasswordSignUpField: CustomTextField = {
         let field = CustomTextField()
         field.placeholder = "Confirm password"
         field.spellCheckingType = .no
@@ -91,7 +91,7 @@ class RegView: UIView {
         field.translatesAutoresizingMaskIntoConstraints = false
         return field
     }()
-    lazy var confirmRegButton: UIButton = {
+    lazy var confirmSignUpButton: UIButton = {
         let button = UIButton()
         button.setTitle("Confirm sign up", for: .normal)
         button.backgroundColor = #colorLiteral(red: 1, green: 0.2704343498, blue: 0.1398084164, alpha: 1)
@@ -103,13 +103,13 @@ class RegView: UIView {
     
     func setupView() {
         addSubview(backToSignIn)
-        addSubview(regLabel)
+        addSubview(signUpLabel)
         addSubview(nameField)
         addSubview(surnameField)
-        addSubview(loginRegField)
-        addSubview(passwordRegField)
-        addSubview(confirmPasswordRegField)
-        addSubview(confirmRegButton)
+        addSubview(loginSignUpField)
+        addSubview(passwordSignUpField)
+        addSubview(confirmPasswordSignUpField)
+        addSubview(confirmSignUpButton)
     }
     func setupConstraints() {
         backToSignIn.snp.makeConstraints { make in
@@ -117,7 +117,7 @@ class RegView: UIView {
             make.height.width.equalTo(30)
             make.leading.equalTo(15)
         }
-        regLabel.snp.makeConstraints { make in
+        signUpLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalTo(10)
             make.height.equalTo(30)
@@ -125,7 +125,7 @@ class RegView: UIView {
         nameField.snp.makeConstraints { make in
             make.leading.equalTo(15)
             make.trailing.equalTo(-15)
-            make.top.equalTo(regLabel.snp.bottom).offset(15)
+            make.top.equalTo(signUpLabel.snp.bottom).offset(15)
             make.height.equalTo(35)
         }
         surnameField.snp.makeConstraints { make in
@@ -134,28 +134,28 @@ class RegView: UIView {
             make.top.equalTo(nameField.snp.bottom).offset(15)
             make.height.equalTo(35)
         }
-        loginRegField.snp.makeConstraints { make in
+        loginSignUpField.snp.makeConstraints { make in
             make.leading.equalTo(15)
             make.trailing.equalTo(-15)
             make.top.equalTo(surnameField.snp.bottom).offset(15)
             make.height.equalTo(35)
         }
-        passwordRegField.snp.makeConstraints { make in
+        passwordSignUpField.snp.makeConstraints { make in
             make.leading.equalTo(15)
             make.trailing.equalTo(-15)
-            make.top.equalTo(loginRegField.snp.bottom).offset(15)
+            make.top.equalTo(loginSignUpField.snp.bottom).offset(15)
             make.height.equalTo(35)
         }
-        confirmPasswordRegField.snp.makeConstraints { make in
+        confirmPasswordSignUpField.snp.makeConstraints { make in
             make.leading.equalTo(15)
             make.trailing.equalTo(-15)
-            make.top.equalTo(passwordRegField.snp.bottom).offset(15)
+            make.top.equalTo(passwordSignUpField.snp.bottom).offset(15)
             make.height.equalTo(35)
         }
-        confirmRegButton.snp.makeConstraints { make in
+        confirmSignUpButton.snp.makeConstraints { make in
             make.leading.equalTo(15)
             make.trailing.equalTo(-15)
-            make.top.equalTo(confirmPasswordRegField.snp.bottom).offset(15)
+            make.top.equalTo(confirmPasswordSignUpField.snp.bottom).offset(15)
             make.height.equalTo(40)
         }
     }

@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class LoginView: UIView {
+class SignInView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         alpha = 0.0

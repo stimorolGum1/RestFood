@@ -5,9 +5,18 @@
   Created by Danil on 14.04.2024.
   
 */
-"loginView_welcomeLabel" = "Welcome to RestFood";
-"loginView_loginField" = "Login";
-"loginView_passField" = "Password";
-"loginView_submitButton" = "Login";
-"loginView_regButton" = "Sign up";
-
+//SignInView
+"SignInView_welcomeLabel" = "Welcome to RestFood";
+"SignInView_loginField" = "Login";
+"SignInView_passField" = "Password";
+"SignInView_submitButton" = "Login";
+"SignInView_regButton" = "Sign up";
+//SignUpView
+"SignUpView_backToSignIn" = "Sign up";
+"SignUpView_signUpLabel" = "Name";
+"SignUpView_nameField" = "Surname";
+"SignUpView_surnameField" = "Login";
+"SignUpView_loginSignUpField" = "Password";
+"SignUpView_passwordSignUpField" = "Password";
+"SignUpView_confirmPasswordSignUpField" = "Confirm password";
+"SignUpView_confirmSignUpButton" = "Confirm sign up";

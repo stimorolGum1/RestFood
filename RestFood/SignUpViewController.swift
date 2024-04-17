@@ -14,10 +14,10 @@ protocol SignUpViewControllerProtocol: AnyObject {
 
 class SignUpViewController: UIViewController {
     var presenter: SignUpPresenterProtocol!
-    lazy var viewReg: RegView = {
-        let view = RegView()
+    lazy var viewReg: SingUpView = {
+        let view = SingUpView()
         view.backToSignIn.addTarget(self, action: #selector(showLogin), for: .touchUpInside)
-        view.confirmRegButton.addTarget(self, action: #selector(confirmReg), for: .touchUpInside)
+        view.confirmSignUpButton.addTarget(self, action: #selector(confirmReg), for: .touchUpInside)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -94,10 +94,10 @@ class SignUpViewController: UIViewController {
         presenter.openLogin()
     }
     @objc func confirmReg() {
-        if presenter.checkLogin(login: viewReg.loginRegField.text ?? "") &&
-            presenter.checkPass(pass: viewReg.passwordRegField.text ?? "") &&
-            viewReg.passwordRegField.text == viewReg.confirmPasswordRegField.text {
-            presenter.openOnboarding()
+        if presenter.checkLogin(login: viewReg.loginSignUpField.text ?? "") &&
+            presenter.checkPass(pass: viewReg.passwordSignUpField.text ?? "") &&
+            viewReg.passwordSignUpField.text == viewReg.confirmPasswordSignUpField.text {
+            presenter.auth(login: viewReg.loginSignUpField.text ?? "", pass: viewReg.passwordSignUpField.text ?? "")
         }
         else {
             wrongReg()
