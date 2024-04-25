@@ -74,8 +74,7 @@ class SignInViewController: UIViewController {
     }
 
     @objc func authOk() {
-        presenter.auth(login: signInView.loginField.text ?? "", pass: signInView.passField.text ?? "") { [weak self] error in
-        }
+        
     }
     @objc func wrongAuth() {
         let startX = signInView.frame.origin.x

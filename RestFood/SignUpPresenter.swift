@@ -13,7 +13,6 @@ protocol SignUpPresenterProtocol: AnyObject {
     func openLogin()
     func checkLogin(login: String) -> Bool
     func checkPass(pass: String) -> Bool
-    func auth(login: String, pass: String)
 }
 
 class SignUpPresenter {
@@ -30,10 +29,6 @@ class SignUpPresenter {
 }
 
 extension SignUpPresenter: SignUpPresenterProtocol {
-    func auth(login: String, pass: String) {
-    }
-    
-    
     func checkPass(pass: String) -> Bool {
         let regex = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$"
         let predicate = NSPredicate(format: "SELF MATCHES %@", regex)

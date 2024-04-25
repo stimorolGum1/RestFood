@@ -11,7 +11,6 @@ protocol SignInPresenterProtocol: AnyObject {
     func openMain()
     func openOnboarding()
     func openSignUp()
-    func auth(login: String, pass: String, completion: @escaping (Error?) -> Void)
 }
 
 class SignInPresenter {
@@ -28,8 +27,6 @@ class SignInPresenter {
 }
 
 extension SignInPresenter: SignInPresenterProtocol {
-    func auth(login: String, pass: String, completion: @escaping (Error?) -> Void) {
-    }
     func openSignUp() {
         router.openSignUp()
     }

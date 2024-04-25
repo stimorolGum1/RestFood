@@ -2,6 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>APIkey</key>
+	<string>AIzaSyBZa6C8mJFVNHdP8Y4V1OKn-KMrDyVxpro</string>
+	<key>URLs</key>
+	<dict>
+		<key>SignIn</key>
+		<string>https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=</string>
+		<key>SignUp</key>
+		<string>https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=</string>
+	</dict>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

@@ -96,11 +96,10 @@ class SignUpViewController: UIViewController {
     @objc func confirmReg() {
         if presenter.checkLogin(login: viewReg.loginSignUpField.text ?? "") &&
             presenter.checkPass(pass: viewReg.passwordSignUpField.text ?? "") &&
-            viewReg.passwordSignUpField.text == viewReg.confirmPasswordSignUpField.text {
-            presenter.auth(login: viewReg.loginSignUpField.text ?? "", pass: viewReg.passwordSignUpField.text ?? "")
-        }
-        else {
-            wrongReg()
+            viewReg.passwordSignUpField.text == viewReg.confirmPasswordSignUpField.text &&
+            viewReg.loginSignUpField.text != "" &&
+            viewReg.passwordSignUpField.text != "" &&
+            viewReg.confirmPasswordSignUpField.text != "" {
         }
     }
 }

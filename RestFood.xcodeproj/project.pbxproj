@@ -90,6 +90,7 @@
 		83EEA8D02B68E2E600091203 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EEA8C62B68E2E600091203 /* Router.swift */; };
 		83EEA8D12B68E2E600091203 /* DefaultRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EEA8C72B68E2E600091203 /* DefaultRouter.swift */; };
 		83EEA8D32B68E30000091203 /* SignInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EEA8D22B68E30000091203 /* SignInRouter.swift */; };
+		83F2C9082BD145F500B65949 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F2C9072BD145F500B65949 /* NetworkManager.swift */; };
 		9193F79421BCA0C9384763D6 /* Pods_RestFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3410826907CAC30FC6503D89 /* Pods_RestFood.framework */; };
 /* End PBXBuildFile section */
 
@@ -182,6 +183,7 @@
 		83EEA8C62B68E2E600091203 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		83EEA8C72B68E2E600091203 /* DefaultRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultRouter.swift; sourceTree = "<group>"; };
 		83EEA8D22B68E30000091203 /* SignInRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInRouter.swift; sourceTree = "<group>"; };
+		83F2C9072BD145F500B65949 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		D75B7F023DA87304AA460F46 /* Pods-RestFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestFood.debug.xcconfig"; path = "Target Support Files/Pods-RestFood/Pods-RestFood.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -297,6 +299,7 @@
 		83566D012BA32B410089E461 /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
+				83F2C9072BD145F500B65949 /* NetworkManager.swift */,
 			);
 			name = NetworkManager;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 			isa = PBXGroup;
 			children = (
 				839C4E752B9CC0B9001FA1F0 /* OnBoardingView */,
+				832A69292B98AD800071B6FD /* OnBoardingViewController.swift */,
 				832A692B2B98AE2E0071B6FD /* OnBoardingPresenter.swift */,
 				832A692D2B98AE5D0071B6FD /* OnBoardingModel.swift */,
 				839C4E712B9CBFF8001FA1F0 /* OnboardingRouter.swift */,
@@ -391,7 +395,6 @@
 		839C4E752B9CC0B9001FA1F0 /* OnBoardingView */ = {
 			isa = PBXGroup;
 			children = (
-				832A69292B98AD800071B6FD /* OnBoardingViewController.swift */,
 				839C4E732B9CC0AE001FA1F0 /* OnBoardingView.swift */,
 			);
 			name = OnBoardingView;
@@ -736,6 +739,7 @@
 				831F06402B6ACA770003D6A6 /* MainScreenViewController.swift in Sources */,
 				8341BCAB2B992E1000349090 /* StartScreenModel.swift in Sources */,
 				8341BCAD2B992FD800349090 /* StartScreenRouter.swift in Sources */,
+				83F2C9082BD145F500B65949 /* NetworkManager.swift in Sources */,
 				839C4E742B9CC0AE001FA1F0 /* OnBoardingView.swift in Sources */,
 				83BB3B192BB5924700A72BB8 /* EditUserModel.swift in Sources */,
 				83B607B62B6ED01E00BBDF35 /* FoodDetailViewController.swift in Sources */,
