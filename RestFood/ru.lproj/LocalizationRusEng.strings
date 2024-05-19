@@ -5,8 +5,66 @@
   Created by Danil on 14.04.2024.
   
 */
-"loginView_welcomeLabel" = "Добро пожаловать в RestFood";
-"loginView_loginField" = "Логин";
-"loginView_passField" = "Пароль";
-"loginView_submitButton" = "Войти";
-"loginView_regButton" = "Зарегистрироваться";
+//SignInView
+"SignInView_welcomeLabel" = "Welcome to RestFood";
+"SignInView_loginField" = "Login";
+"SignInView_passField" = "Password";
+"SignInView_submitButton" = "Login";
+"SignInView_regButton" = "Sign up";
+//SignUpView
+"SignUpView_backToSignIn" = "Sign up";
+"SignUpView_signUpLabel" = "Name";
+"SignUpView_nameField" = "Surname";
+"SignUpView_surnameField" = "Login";
+"SignUpView_loginSignUpField" = "Password";
+"SignUpView_passwordSignUpField" = "Password";
+"SignUpView_confirmPasswordSignUpField" = "Confirm password";
+"SignUpView_confirmSignUpButton" = "Confirm sign up";
+//OnBoarding
+"OnBoarding_firstPage" = "Make your food order simply by scanning the QR code";
+"OnBoarding_SecondPage" = "Make purchase fast and easy";
+"OnBoarding_ThirdPage" = "Enjoy your food";
+"nextButton" = "Next";
+//EditUserView
+"changeAvatarButton" = "Click here to change avatar";
+"nameLabel" = "Name:";
+"changeNameField" = "Name";
+"surnameLabel" = "Surname:";
+"changeSurnameField" = "Surname";
+"emailLabel" = "email:";
+"changeEmailField" = "Email";
+"passwordLabel" = "password:";
+"changePasswordField" = "Password";
+"applyChangeButton" = "Apply changes";
+//StartScreenViewController
+"welcomeToLabel" = "Welcome to RestFood";
+"statusLabel" = "Searching nearest restoraunt";
+//MainScreenViewController
+"header" = "Welcome, Kenni";
+//FoodDetailViewController
+"addToCartButton" = "Add to cart";
+//ProfileViewController
+"editUserButton" = "Edit User";
+"AboutAppButton" = "About App";
+"logOutFromAccountButton" = "log out from account";
+//FAQViewController
+"aboutLabel" = "About app. ITS good apps, good food on vse vremena";
+"createdByLabel" = "Created by Stimorol Gum \nContacts: \nTelegram: stimorol_gum \nMail: stmrlgum@gmail.com";
+//PaymentMethodViewController
+"header" = "Add payment Method";
+"cardField" = "Card Number";
+"nameSurnameField" = "Cardholder name";
+"dateOfExpiredField" = "MM/YY";
+"cvcField" = "CVC";
+"addPaymentButton" = "Add";
+//PurchaseViewController
+"header" = "Purchase";
+"addressLabel" = "Address";
+"scanQrLabelHeader" = "Scan QR code on table";
+"scanQrLabel" = "for deliver your order, scan the QR code";
+"scanButton" = "Scan QR";
+"PaymentMethodLabel" = "Choose method of payment:";
+"costLabel" = "Total cost:";
+"confirmOrderButton" = "Confirm";
+//ScannerVIewController
+"headerLabel" = "Scan QR";

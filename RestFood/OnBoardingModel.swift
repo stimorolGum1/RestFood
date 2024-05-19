@@ -10,11 +10,11 @@ struct OnBoardingModel {
     var slides = [OnBoardingView]()
     mutating func createSlides() {
         let firstOnBoarding = OnBoardingView()
-        firstOnBoarding.setPageLabelText(text: "Я бы хотел щас поесть к вам придти")
+        firstOnBoarding.setPageLabelText(text: "Make your food order simply by scanning the QR code")
         let secondOnBoarding = OnBoardingView()
-        secondOnBoarding.setPageLabelText(text: "А с чем вам приготовить?")
+        secondOnBoarding.setPageLabelText(text: "Make purchase fast and easy")
         let thirdOnBoarding = OnBoardingView()
-        thirdOnBoarding.setPageLabelText(text: "Рыбу")
+        thirdOnBoarding.setPageLabelText(text: "Enjoy your food")
         self.slides.append(contentsOf: [firstOnBoarding, secondOnBoarding, thirdOnBoarding])
     }
 }

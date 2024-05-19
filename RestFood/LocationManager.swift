@@ -18,22 +18,14 @@ struct LocationDetails {
 
 class LocationManager: NSObject {
     
-    // Singleton
     static let shared = LocationManager()
-    
-    // Location manager
     let clManager = CLLocationManager()
+    var locationDetails: LocationDetails?
     
-    // Stored property for location details
-    private(set) var locationDetails: LocationDetails?
-    
-    // Private init to ensure singleton
     private override init() {
         super.init()
         setUpCLManager()
     }
-    
-    // MARK: - Helper Functions
     
     private func setUpCLManager() {
         clManager.delegate = self
@@ -88,7 +80,7 @@ class LocationManager: NSObject {
             let city = details.city ?? "Unknown city"
             let street = details.street ?? "Unknown street"
             let buildingNumber = details.buildingNumber ?? "Unknown building number"
-            print("City: \(city), Street: \(street), Building Number: \(buildingNumber)")
+            print("\(city), \(street), \(buildingNumber)")
         } else {
             print("Location details are not available.")
         }
@@ -115,7 +107,6 @@ class LocationManager: NSObject {
 extension LocationManager: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        // We can update the location details when a new location update is received
         fetchCurrentLocation { _ in }
     }
     

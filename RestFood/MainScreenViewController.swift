@@ -66,8 +66,6 @@ class MainScreenViewController: UIViewController {
         locationManager.fetchCurrentLocation { placemark in
             if let placemark = placemark {
                 locationManager.printLocationDetails()
-                
-                // Update the labels with location details
             }
         }
     }

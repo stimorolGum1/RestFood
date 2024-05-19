@@ -143,8 +143,7 @@ class PurchaseViewController: UIViewController {
             if let placemark = placemark {
                 locationManager.printLocationDetails()
                 locationManager.updateMapView(self.cafeMap)
-                
-                // Update the labels with location details
+                self.streetLabel.text = "\(locationManager.locationDetails!.city ?? ""),\(locationManager.locationDetails!.street ?? ""), \(locationManager.locationDetails!.buildingNumber ?? "")"
             }
         }
     }
