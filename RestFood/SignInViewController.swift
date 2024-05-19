@@ -16,7 +16,7 @@ class SignInViewController: UIViewController {
     var presenter: SignInPresenterProtocol!
     lazy var signInView: SignInView = {
         let view = SignInView()
-        view.submitButton.addTarget(self, action: #selector(authOk), for: .touchUpInside)
+        view.submitButton.addTarget(self, action: #selector(auth), for: .touchUpInside)
         view.regButton.addTarget(self, action: #selector(showSignUp), for: .touchUpInside)
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -73,8 +73,8 @@ class SignInViewController: UIViewController {
         })
     }
 
-    @objc func authOk() {
-        
+    @objc func auth() {
+        presenter.makeSignIn(withEmail: signInView.loginField.text ?? "", password: signInView.passField.text ?? "")
     }
     @objc func wrongAuth() {
         let startX = signInView.frame.origin.x

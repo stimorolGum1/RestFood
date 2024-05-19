@@ -58,7 +58,6 @@ class PurchaseViewController: UIViewController {
     }()
     lazy var streetLabel: UILabel = {
         let label = UILabel()
-        label.text = "Mukhosransk city, Kekovaya st. 23"
         label.font = UIFont.boldSystemFont(ofSize: 20.0)
         label.textAlignment = .center
         label.backgroundColor = .white
@@ -139,8 +138,16 @@ class PurchaseViewController: UIViewController {
         collectionOfPayment.delegate = self
         collectionOfPayment.dataSource = self
         collectionOfPayment.register(PaymentMethodCell.self, forCellWithReuseIdentifier: paymentCell)
+        let locationManager = LocationManager.shared
+        locationManager.fetchCurrentLocation { placemark in
+            if let placemark = placemark {
+                locationManager.printLocationDetails()
+                locationManager.updateMapView(self.cafeMap)
+                
+                // Update the labels with location details
+            }
+        }
     }
-    
     func setupViews() { //TODO: добавить какой столик выбран
         view.addSubview(header)
         view.addSubview(backButton)
@@ -233,18 +240,18 @@ class PurchaseViewController: UIViewController {
         confirmView.snp.makeConstraints { make in
             make.bottom.equalToSuperview()
             make.leading.equalTo(0)
-            make.height.equalTo(70)
+            make.height.equalTo(80)
             make.trailing.equalTo(0)
         }
         costLabel.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(15)
-            make.top.equalToSuperview().offset(15)
+            make.top.equalToSuperview().offset(10)
             make.height.equalTo(40)
             make.width.equalToSuperview().dividedBy(2).offset(-5)
         }
         confirmOrderButton.snp.makeConstraints { make in
             make.trailing.equalToSuperview().offset(-15)
-            make.top.equalToSuperview().offset(15)
+            make.top.equalToSuperview().offset(10)
             make.height.equalTo(40)
             make.width.equalToSuperview().dividedBy(2).offset(5)
         }

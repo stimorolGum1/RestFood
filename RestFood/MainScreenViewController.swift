@@ -62,7 +62,14 @@ class MainScreenViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(TableViewCell.self, forCellReuseIdentifier: tableCell)
-        
+        let locationManager = LocationManager.shared
+        locationManager.fetchCurrentLocation { placemark in
+            if let placemark = placemark {
+                locationManager.printLocationDetails()
+                
+                // Update the labels with location details
+            }
+        }
     }
     func setupViews() {
         view.addSubview(header)

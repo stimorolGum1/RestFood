@@ -8,6 +8,7 @@
 import Foundation
 protocol ScannerPresenterProtocol {
     func close()
+    func qrDecode(dataOfTable: String, completion: (String?, Error?) -> Void)
 }
 class ScannerPresenter {
     weak var view: ScannerViewControllerProtocol?
@@ -19,12 +20,17 @@ class ScannerPresenter {
         self.view = view
         self.model = model
     }
-    
 }
 extension ScannerPresenter: ScannerPresenterProtocol {
+    func qrDecode(dataOfTable: String, completion: (String?, Error?) -> Void) {
+        do {
+            let restaurantInfo = try JSONDecoder().decode(ScannerModel.self, from: dataOfTable.data(using: .utf8)!)
+            completion(String(restaurantInfo.tableNumber), nil)
+        } catch {
+            completion(nil, error)
+        }
+    }
     func close() {
         router.close()
     }
-    
-    
 }

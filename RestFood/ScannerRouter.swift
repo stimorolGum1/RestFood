@@ -15,7 +15,7 @@ extension ScannerRoute where Self: Router {
     func openScanner(with transition: Transition) {
         let router = DefaultRouter(rootTransition: transition)
         let viewController = ScannerViewController()
-        let model = ScannerModel()
+        let model = ScannerModel(city: "", restoraunt: "", tableNumber: 0)
         let presenter = ScannerPresenter(router: router, view: viewController, model: model)
         viewController.presenter = presenter
         router.root = viewController

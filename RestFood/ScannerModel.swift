@@ -6,6 +6,8 @@
 //
 
 import Foundation
-struct ScannerModel {
-    
+struct ScannerModel: Codable {
+    let city: String
+    let restoraunt: String
+    let tableNumber: Int
 }

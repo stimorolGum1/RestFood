@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3EAF19BC3F1C3845D5AE047C /* Pods_RestFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A536502B671E3BCF662D4C00 /* Pods_RestFood.framework */; };
 		8312E8582BA72F1400F740CF /* TransactionStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8312E8572BA72F1400F740CF /* TransactionStatusViewController.swift */; };
 		8312E85A2BA72F1F00F740CF /* TransactionStatusPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8312E8592BA72F1F00F740CF /* TransactionStatusPresenter.swift */; };
 		8312E85C2BA72F2800F740CF /* TransactionStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8312E85B2BA72F2800F740CF /* TransactionStatusModel.swift */; };
@@ -43,6 +44,7 @@
 		837C16BA2BBDA7D5004CD780 /* PaymentMethodPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C16B92BBDA7D5004CD780 /* PaymentMethodPresenter.swift */; };
 		837C16BC2BBDA7DE004CD780 /* PaymentMethodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C16BB2BBDA7DE004CD780 /* PaymentMethodModel.swift */; };
 		837C16BE2BBDA7E8004CD780 /* PaymentMethodRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C16BD2BBDA7E8004CD780 /* PaymentMethodRouter.swift */; };
+		83899EB92BEFBE65007FBFF6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83899EB82BEFBE65007FBFF6 /* LocationManager.swift */; };
 		839C4E722B9CBFF9001FA1F0 /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839C4E712B9CBFF8001FA1F0 /* OnboardingRouter.swift */; };
 		839C4E742B9CC0AE001FA1F0 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839C4E732B9CC0AE001FA1F0 /* OnBoardingView.swift */; };
 		839ECC842B9D8B0E00FA504C /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839ECC832B9D8B0E00FA504C /* PurchaseViewController.swift */; };
@@ -77,6 +79,7 @@
 		83D370062BCABA0200DDF36F /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D370052BCABA0200DDF36F /* SignUpRouter.swift */; };
 		83D370082BCAC2EA00DDF36F /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D370072BCAC2EA00DDF36F /* SignInViewController.swift */; };
 		83D370152BCAD39200DDF36F /* LocalizationRusEng.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83D370172BCAD39200DDF36F /* LocalizationRusEng.strings */; };
+		83E7F5B12BDA94C600C68E88 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83E7F5B02BDA94C600C68E88 /* GoogleService-Info.plist */; };
 		83EEA8B82B68E26100091203 /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EEA8B72B68E26100091203 /* SignInPresenter.swift */; };
 		83EEA8BA2B68E29C00091203 /* SignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EEA8B92B68E29C00091203 /* SignInModel.swift */; };
 		83EEA8C82B68E2E600091203 /* ModalTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EEA8BD2B68E2E600091203 /* ModalTransition.swift */; };
@@ -91,12 +94,11 @@
 		83EEA8D12B68E2E600091203 /* DefaultRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EEA8C72B68E2E600091203 /* DefaultRouter.swift */; };
 		83EEA8D32B68E30000091203 /* SignInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EEA8D22B68E30000091203 /* SignInRouter.swift */; };
 		83F2C9082BD145F500B65949 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F2C9072BD145F500B65949 /* NetworkManager.swift */; };
-		9193F79421BCA0C9384763D6 /* Pods_RestFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3410826907CAC30FC6503D89 /* Pods_RestFood.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3410826907CAC30FC6503D89 /* Pods_RestFood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestFood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		535F739F037DA879095B91F3 /* Pods-RestFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestFood.release.xcconfig"; path = "Target Support Files/Pods-RestFood/Pods-RestFood.release.xcconfig"; sourceTree = "<group>"; };
+		04D5C8D2FCC3896158A7ABD3 /* Pods-RestFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestFood.debug.xcconfig"; path = "Target Support Files/Pods-RestFood/Pods-RestFood.debug.xcconfig"; sourceTree = "<group>"; };
+		7B9C8D84BBB2154B8935F36C /* Pods-RestFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestFood.release.xcconfig"; path = "Target Support Files/Pods-RestFood/Pods-RestFood.release.xcconfig"; sourceTree = "<group>"; };
 		8312E8572BA72F1400F740CF /* TransactionStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionStatusViewController.swift; sourceTree = "<group>"; };
 		8312E8592BA72F1F00F740CF /* TransactionStatusPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionStatusPresenter.swift; sourceTree = "<group>"; };
 		8312E85B2BA72F2800F740CF /* TransactionStatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionStatusModel.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 		8341BCAA2B992E1000349090 /* StartScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenModel.swift; sourceTree = "<group>"; };
 		8341BCAC2B992FD800349090 /* StartScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenRouter.swift; sourceTree = "<group>"; };
 		8341BCAE2B99F70D00349090 /* CustomUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUITextField.swift; sourceTree = "<group>"; };
+		8346D2942BF259C900FA724B /* RestFood.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RestFood.entitlements; sourceTree = "<group>"; };
 		834F6E712B877B4400EACF43 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		834F6E732B877B5500EACF43 /* TabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarRouter.swift; sourceTree = "<group>"; };
 		834F6E772B8786A800EACF43 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +136,7 @@
 		837C16B92BBDA7D5004CD780 /* PaymentMethodPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodPresenter.swift; sourceTree = "<group>"; };
 		837C16BB2BBDA7DE004CD780 /* PaymentMethodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodModel.swift; sourceTree = "<group>"; };
 		837C16BD2BBDA7E8004CD780 /* PaymentMethodRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodRouter.swift; sourceTree = "<group>"; };
+		83899EB82BEFBE65007FBFF6 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		839C4E712B9CBFF8001FA1F0 /* OnboardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
 		839C4E732B9CC0AE001FA1F0 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		839ECC832B9D8B0E00FA504C /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +174,7 @@
 		83D370072BCAC2EA00DDF36F /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		83D370162BCAD39200DDF36F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizationRusEng.strings; sourceTree = "<group>"; };
 		83D370182BCAD39600DDF36F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LocalizationRusEng.strings; sourceTree = "<group>"; };
+		83E7F5B02BDA94C600C68E88 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		83EEA8B72B68E26100091203 /* SignInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPresenter.swift; sourceTree = "<group>"; };
 		83EEA8B92B68E29C00091203 /* SignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
 		83EEA8BD2B68E2E600091203 /* ModalTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalTransition.swift; sourceTree = "<group>"; };
@@ -184,7 +189,7 @@
 		83EEA8C72B68E2E600091203 /* DefaultRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultRouter.swift; sourceTree = "<group>"; };
 		83EEA8D22B68E30000091203 /* SignInRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInRouter.swift; sourceTree = "<group>"; };
 		83F2C9072BD145F500B65949 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		D75B7F023DA87304AA460F46 /* Pods-RestFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestFood.debug.xcconfig"; path = "Target Support Files/Pods-RestFood/Pods-RestFood.debug.xcconfig"; sourceTree = "<group>"; };
+		A536502B671E3BCF662D4C00 /* Pods_RestFood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestFood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,7 +197,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9193F79421BCA0C9384763D6 /* Pods_RestFood.framework in Frameworks */,
+				3EAF19BC3F1C3845D5AE047C /* Pods_RestFood.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,10 +207,18 @@
 		5F64D1F97D4D4CCCEE804DBB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D75B7F023DA87304AA460F46 /* Pods-RestFood.debug.xcconfig */,
-				535F739F037DA879095B91F3 /* Pods-RestFood.release.xcconfig */,
+				04D5C8D2FCC3896158A7ABD3 /* Pods-RestFood.debug.xcconfig */,
+				7B9C8D84BBB2154B8935F36C /* Pods-RestFood.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		7382E560A274544118371853 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A536502B671E3BCF662D4C00 /* Pods_RestFood.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		8312E8562BA72CBB00F740CF /* TransactionStatus */ = {
@@ -292,6 +305,7 @@
 		83566D002BA32B320089E461 /* LocationManager */ = {
 			isa = PBXGroup;
 			children = (
+				83899EB82BEFBE65007FBFF6 /* LocationManager.swift */,
 			);
 			name = LocationManager;
 			sourceTree = "<group>";
@@ -426,13 +440,6 @@
 			name = AboutApp;
 			sourceTree = "<group>";
 		};
-		83AB17DE2BC4B578002BF1CB /* KeychainManager */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = KeychainManager;
-			sourceTree = "<group>";
-		};
 		83B607B42B6ECF9700BBDF35 /* FoodDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -490,7 +497,7 @@
 				83D0C3F82B6778F9005D9DC9 /* RestFood */,
 				83D0C3F72B6778F9005D9DC9 /* Products */,
 				5F64D1F97D4D4CCCEE804DBB /* Pods */,
-				BD78F4A789C41B6A6AAA5833 /* Frameworks */,
+				7382E560A274544118371853 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -505,6 +512,7 @@
 		83D0C3F82B6778F9005D9DC9 /* RestFood */ = {
 			isa = PBXGroup;
 			children = (
+				8346D2942BF259C900FA724B /* RestFood.entitlements */,
 				83BF4FC92B67C08B00546F04 /* SignIn */,
 				83D36FFE2BCAB98F00DDF36F /* SignUp */,
 				83853F3F2B9764E500E4E678 /* OnBoarding */,
@@ -519,7 +527,6 @@
 				839C4E6C2B9CBDA8001FA1F0 /* Purchase */,
 				8312E8562BA72CBB00F740CF /* TransactionStatus */,
 				83D3700A2BCACF7A00DDF36F /* Localization */,
-				83AB17DE2BC4B578002BF1CB /* KeychainManager */,
 				83AB17DC2BC4B558002BF1CB /* AboutApp */,
 				83771B0C2BBC114F00E8B825 /* PaymentMethod */,
 				83566D002BA32B320089E461 /* LocationManager */,
@@ -532,6 +539,7 @@
 				83D370092BCACF6A00DDF36F /* Delegate */,
 				83D0C4022B6778FA005D9DC9 /* Assets.xcassets */,
 				83D0C4072B6778FA005D9DC9 /* Info.plist */,
+				83E7F5B02BDA94C600C68E88 /* GoogleService-Info.plist */,
 			);
 			path = RestFood;
 			sourceTree = "<group>";
@@ -598,14 +606,6 @@
 			path = Animated;
 			sourceTree = "<group>";
 		};
-		BD78F4A789C41B6A6AAA5833 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3410826907CAC30FC6503D89 /* Pods_RestFood.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -613,11 +613,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83D0C40A2B6778FA005D9DC9 /* Build configuration list for PBXNativeTarget "RestFood" */;
 			buildPhases = (
-				36BA8E0F12E128BDEF83E563 /* [CP] Check Pods Manifest.lock */,
+				E67392FC3F24FA96E93FB6DB /* [CP] Check Pods Manifest.lock */,
 				83D0C3F22B6778F9005D9DC9 /* Sources */,
 				83D0C3F32B6778F9005D9DC9 /* Frameworks */,
 				83D0C3F42B6778F9005D9DC9 /* Resources */,
-				1DF05C6B85A92287DF84F84C /* [CP] Embed Pods Frameworks */,
+				0AD083ECDF5F699358346762 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -669,13 +669,14 @@
 			files = (
 				83D370152BCAD39200DDF36F /* LocalizationRusEng.strings in Resources */,
 				83D0C4032B6778FA005D9DC9 /* Assets.xcassets in Resources */,
+				83E7F5B12BDA94C600C68E88 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1DF05C6B85A92287DF84F84C /* [CP] Embed Pods Frameworks */ = {
+		0AD083ECDF5F699358346762 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -692,7 +693,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RestFood/Pods-RestFood-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		36BA8E0F12E128BDEF83E563 /* [CP] Check Pods Manifest.lock */ = {
+		E67392FC3F24FA96E93FB6DB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -772,6 +773,7 @@
 				8341BCA92B992E0000349090 /* StartScreenPresenter.swift in Sources */,
 				83EEA8BA2B68E29C00091203 /* SignInModel.swift in Sources */,
 				83A845352BC1885000664267 /* EditUserView.swift in Sources */,
+				83899EB92BEFBE65007FBFF6 /* LocationManager.swift in Sources */,
 				83EEA8D12B68E2E600091203 /* DefaultRouter.swift in Sources */,
 				83EEA8B82B68E26100091203 /* SignInPresenter.swift in Sources */,
 				839ECC882B9D8B2A00FA504C /* PurchaseModel.swift in Sources */,
@@ -944,10 +946,11 @@
 		};
 		83D0C40B2B6778FA005D9DC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D75B7F023DA87304AA460F46 /* Pods-RestFood.debug.xcconfig */;
+			baseConfigurationReference = 04D5C8D2FCC3896158A7ABD3 /* Pods-RestFood.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RestFood/RestFood.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 56NB3JKLU5;
@@ -966,7 +969,64 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.danil.restFoodiOS;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"FBLPromises\"",
+					"-framework",
+					"\"FirebaseAppCheckInterop\"",
+					"-framework",
+					"\"FirebaseAuth\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseCoreExtension\"",
+					"-framework",
+					"\"FirebaseCoreInternal\"",
+					"-framework",
+					"\"FirebaseFirestore\"",
+					"-framework",
+					"\"FirebaseFirestoreInternal\"",
+					"-framework",
+					"\"FirebaseSharedSwift\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GTMSessionFetcher\"",
+					"-framework",
+					"\"GoogleUtilities\"",
+					"-framework",
+					"\"RecaptchaInterop\"",
+					"-framework",
+					"\"SafariServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SnapKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"absl\"",
+					"-framework",
+					"\"grpc\"",
+					"-framework",
+					"\"grpcpp\"",
+					"-framework",
+					"\"leveldb\"",
+					"-framework",
+					"\"nanopb\"",
+					"-framework",
+					"\"openssl_grpc\"",
+					"-weak_framework",
+					"\"FirebaseFirestoreInternal\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.danil.restFood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -978,10 +1038,11 @@
 		};
 		83D0C40C2B6778FA005D9DC9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 535F739F037DA879095B91F3 /* Pods-RestFood.release.xcconfig */;
+			baseConfigurationReference = 7B9C8D84BBB2154B8935F36C /* Pods-RestFood.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RestFood/RestFood.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 56NB3JKLU5;
@@ -1000,7 +1061,64 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.danil.restFoodiOS;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"FBLPromises\"",
+					"-framework",
+					"\"FirebaseAppCheckInterop\"",
+					"-framework",
+					"\"FirebaseAuth\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseCoreExtension\"",
+					"-framework",
+					"\"FirebaseCoreInternal\"",
+					"-framework",
+					"\"FirebaseFirestore\"",
+					"-framework",
+					"\"FirebaseFirestoreInternal\"",
+					"-framework",
+					"\"FirebaseSharedSwift\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GTMSessionFetcher\"",
+					"-framework",
+					"\"GoogleUtilities\"",
+					"-framework",
+					"\"RecaptchaInterop\"",
+					"-framework",
+					"\"SafariServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SnapKit\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"absl\"",
+					"-framework",
+					"\"grpc\"",
+					"-framework",
+					"\"grpcpp\"",
+					"-framework",
+					"\"leveldb\"",
+					"-framework",
+					"\"nanopb\"",
+					"-framework",
+					"\"openssl_grpc\"",
+					"-weak_framework",
+					"\"FirebaseFirestoreInternal\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.danil.restFood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

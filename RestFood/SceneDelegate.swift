@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         let router = DefaultRouter(rootTransition: EmptyTransition())
         //let checkScreen = UserDefaults.standard.integer(forKey: "WhichScreenShowNext")
-        let checkScreen = 0
+        let checkScreen =  2
         switch checkScreen {
         case 0:
             window?.rootViewController = router.openSignInAsStartScreen()

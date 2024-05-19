@@ -132,9 +132,19 @@ extension ScannerViewController: AVCaptureMetadataOutputObjectsDelegate {
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         if let metadataObject = metadataObjects.first as? AVMetadataMachineReadableCodeObject {
             if metadataObject.type == .qr, let qrCode = metadataObject.stringValue {
-                self.headerLabel.text = qrCode
+                presenter.qrDecode(dataOfTable: qrCode) {[weak self] tableNumber, error in
+                    switch(tableNumber, error) {
+                    case let (.some(tableNumber), _):
+                        self?.headerLabel.text = tableNumber // TODO: сделать обработку ошибок
+                        self?.captureSession.stopRunning()
+                        self?.presenter.close()
+                    case let (_, .some(error)): // тут тоже поправить 
+                        self?.headerLabel.text = "incorrect qr"
+                    default:
+                        return
+                    }
+                }
             }
         }
     }
-    
 }

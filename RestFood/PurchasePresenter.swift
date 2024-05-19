@@ -14,7 +14,8 @@ protocol PurchasePresenterProtocol {
 }
 class PurchasePresenter {
     weak var view: PurchaseViewControllerProtocol?
-    var model: PurchaseModel!
+    //var KeychainCardService: KeychainCardService!
+    var model: PurchaseModel! //Добавить сохранение туда карточек и там же делать их добавление в keychain
     let router: Routes
     typealias Routes = Closable & ScannerRoute & TransactionStatusRoute & PaymentMethodRoute
     required init(router: Routes, view: PurchaseViewControllerProtocol?, model: PurchaseModel) {

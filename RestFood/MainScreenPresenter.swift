@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FirebaseFirestoreInternal
 protocol MainScreenPresenterProtocol: AnyObject {
     func prepareCategoriesForCollection(index: IndexPath) -> String
     func prepareName(index: IndexPath) -> String
@@ -14,6 +15,7 @@ protocol MainScreenPresenterProtocol: AnyObject {
     func openDetailFood()
     func modelSection(section: Int) -> String
     func prepareCost(index: IndexPath) -> String
+    //func readTest()
 }
 
 class MainScreenPresenter {
@@ -30,6 +32,28 @@ class MainScreenPresenter {
     }
 }
 extension MainScreenPresenter: MainScreenPresenterProtocol {
+//    func readTest() {
+//        // Get a reference to your Firestore database
+//        let db = Firestore.firestore()
+//        
+//        // Assuming you have a collection named "users"
+//        // Get a reference to the "users" collection
+//        let usersRef = db.collection("foods")
+//        
+//        // Assuming you have a document named "user1" in the "users" collection
+//        // Get a reference to the "user1" document
+//        let user1DocRef = usersRef.document("foodsNames")
+//        
+//        // Fetch data from Firestore
+//        user1DocRef.getDocument { (document, error) in
+//            if let document = document, document.exists {
+//                let data = document.data()
+//                print("Document data: \(data)")
+//            } else {
+//                print("Document does not exist")
+//            }
+//        }
+//    }
     func prepareCost(index: IndexPath) -> String {
         return "$ \(String(model.foodCategories[index.section].foods[index.row].price))"
     }

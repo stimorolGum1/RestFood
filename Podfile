@@ -9,5 +9,7 @@ target 'RestFood' do
   pod 'SnapKit', '~> 5.6.0'
   pod 'SwiftLint'
   pod 'Alamofire'
+  pod 'FirebaseAuth'
+  pod 'FirebaseFirestore'
 
 end

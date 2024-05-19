@@ -51,7 +51,7 @@ class ProfileViewController: UIViewController {
         button.layer.shadowRadius = 3
         button.layer.masksToBounds = false
         button.tintColor = .white
-        button.addTarget(self, action: #selector(logOutFromAccount), for: .touchUpInside)
+        button.addTarget(self, action: #selector(openAboutApp), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -145,6 +145,9 @@ class ProfileViewController: UIViewController {
     }
     @objc func close() {
         presenter.close()
+    }
+    @objc func openAboutApp() {
+        presenter.openAboutApp()
     }
     
 }
